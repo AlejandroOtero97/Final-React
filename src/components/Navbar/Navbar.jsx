@@ -2,7 +2,6 @@ import Container from 'react-bootstrap/Container'
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import Widget from '../Widget/Widget'
-import NavDropdown from "react-bootstrap/NavDropdown"
 
 
 
@@ -10,15 +9,14 @@ import NavDropdown from "react-bootstrap/NavDropdown"
 function NavBar() {
   return (
     
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect>
         <Container>
-            <Navbar.Brand href="#home">Moebiuz-eCommerce</Navbar.Brand>
+            <Navbar.Brand href="#home">MoebiuzShop</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
                 <Nav.Link href="#features">Games</Nav.Link>
                 <Nav.Link href="#pricing">Parts</Nav.Link>
-                
             </Nav>
             <Nav>
                 

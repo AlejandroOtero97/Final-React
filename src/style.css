@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    color: white;
+    text-align: center;
+    text-shadow: 1.5px 2px black;
+    font-family: 'Press Start 2P', cursive;
+    background-image: url("https://wallpapercave.com/wp/wp4363086.jpg");
+    background-size: cover;
+}
