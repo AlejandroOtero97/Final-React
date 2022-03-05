@@ -21,11 +21,11 @@ function ItemListContainer({ saludo }){
                 :
                 prods.map((prod)=>
                                     <div className="card">
-                                        <img className="card-img-top" src={prod.imgUrl} alt="Card image cap" />
+                                        <img className="card-img-top" src={prod.imgUrl} alt="Card" />
                                         <div className="card-body">
                                         <h5 className="card-title">{prod.id}-{prod.name}</h5>
                                         <p className="card-text">{prod.desc}</p>
-                                        <a href="#" className="btn btn-primary">¡Buy!</a>
+                                        <p href="#" className="btn btn-primary">¡Buy!</p>
                                         </div>
                                     </div>
                                 
