@@ -2,14 +2,17 @@ import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/Navbar/NavBar.css'
 import NavBar from './components/Navbar/NavBar';
-import ItemListContainer from './Container/ItemListContainer';
+import ItemListContainer from './Container/ItemListContainer.jsx';
+import Greeting from './Container/ItemListContainer.js'
 
-function App() {
+
+function App(greeting) {
   return (
 
     <>
       <NavBar />
-      <ItemListContainer saludo="Welcome to the React Shop" />
+      <Greeting />
+      <ItemListContainer />
     </>
 
   );
