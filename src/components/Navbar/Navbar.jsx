@@ -15,8 +15,8 @@ function NavBar() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-                <Nav.Link href="#features">Games</Nav.Link>
-                <Nav.Link href="#pricing">Parts</Nav.Link>
+                <Nav.Link href="#games">Games</Nav.Link>
+                <Nav.Link href="#parts">Parts</Nav.Link>
             </Nav>
             <Nav>
                 

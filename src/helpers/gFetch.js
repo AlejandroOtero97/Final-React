@@ -1,16 +1,16 @@
 const productos = [
-    {id: 1, name: 'fede', img: "https://images.unsplash.com/photo-1646500209483-d66f3b910edc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"},
-    {id: 2, name: 'ale'},
-    {id: 3, name: 'feli'},
-    {id: 4, name: 'otto'},
-    {id: 5, name: 'salaame'}]
+    {id: 1, name: 'GTA 5',    desc:"Destroy cars, rob people and have fun",    imgUrl:"https://i0.wp.com/hipertextual.com/wp-content/uploads/2021/05/GTA-5-1-scaled.jpg?fit=2560%2C1439&ssl=1"},
+    {id: 2, name: 'Skyrim',   desc:"Level up, get upgrades, and shot fire",    imgUrl:"https://sm.ign.com/ign_es/screenshot/default/skyrim-regreso_syh4.jpg"},
+    {id: 3, name: 'Tetris',   desc:"Get a highscore betten than mine, try it", imgUrl:"https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_Tetris99_image1600w.jpg"},
+    {id: 4, name: 'HalfLife', desc:"Aliens everywhere, lets hope gordon helps",imgUrl:"https://i.blogs.es/854de1/1585597051_181597_1585597106_noticia_normal/1366_2000.jpeg"},
+    {id: 5, name: 'Terraria', desc:"Keep mining until you hit the underworld", imgUrl:"https://kosgames.com/wp-content/uploads/2021/08/b7c65e77a5f126a1024a8459ec0fd08f879860f1.jpeg"}]
 
 export const getFetch = new Promise((resolve, reject)=>{
     let condition = true
     if(condition){
         setTimeout(() => {
             resolve(productos)
-        }, 2000);
+        }, 3000);
     }else{
         reject("400 - not found")
     }

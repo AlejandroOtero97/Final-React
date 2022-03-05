@@ -2,10 +2,9 @@ import { useEffect, useState } from 'react';
 import { getFetch } from '../helpers/gFetch';
 
 function ItemListContainer({ saludo }){
-
     const [bool, setBool] = useState(true)
-    const [prods, setProds] = useState([])
     const [loading, setLoading] = useState(true)
+    const [prods, setProds] = useState([])
 
     useEffect(()=>{
         getFetch 
@@ -17,96 +16,26 @@ function ItemListContainer({ saludo }){
 
     return(
         <>
-
-            <div className="text-center">
-                <div>{saludo}</div>
-                {loading ? <h2>Cargando...</h2> 
-                : 
-                <ul>{ prods.map((prod) => <li key={prod.id}>
-                    {prod.name}
-                    <img></img>
-                    </li>
-                    )}
-                </ul>}
-                
-                <button onClick={()=> setBool(!bool)}>click</button>
+            <div className="container">
+                {loading ? <h2><i className="fa-regular fa-hourglass"></i>Loading...</h2>
+                :
+                prods.map((prod)=> 
+                                    <div className="card">
+                                        <img className="card-img-top" src={prod.imgUrl} alt="Card image cap" />
+                                        <div className="card-body">
+                                        <h5 className="card-title">{prod.id}-{prod.name}</h5>
+                                        <p className="card-text">{prod.desc}</p>
+                                        <a href="#" className="btn btn-primary">¡Buy!</a>
+                                        </div>
+                                    </div>
+                                
+                )} 
             </div>
-    
+            
+            <button onClick={()=> setBool(!bool)}>click</button>
         </>
     )
 }
 
 
 export default ItemListContainer;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-import { useState, useEffect } from 'react'
-
-function ItemListContainer ({ saludo }) {
-    const [ count, setCount ] = useState(0)
-    const [ bool, setBool ] = useState ( true )
-
-
-    useEffect(()=>{
-        console.log("useEffect cada vez que se renderize el componente")
-        return () => {
-            console.log("efecto de limpieza")
-        }
-    })
-
-    useEffect(()=>{
-        console.log("llamada a api, o tarea sincronica pesada - 2 - una sola vez despues del primer montado")
-    }, []) //array vacio para que sea solo llamado una vez
-
-    useEffect(()=>{
-        console.log("solo se dispara si cambia bool")
-    }, [bool, saludo])
-
-
-    const handleCount = () => {
-        setCount( count + 1 )
-        console.log(count)
-    }
-
-    const handleBool = () => {
-        setBool(!bool)
-    }
-
-    console.log("montado del componente")
-
-
-    return(
-        <>
-            <div className='text-center'>
-                <div>{count}</div>
-                <label>{Date(count)}</label>
-                <button onClick={handleBool}>Buleano</button>
-                <button onClick={handleCount}>click</button>
-            </div>
-        </>
-        
-    )
-}
-*/

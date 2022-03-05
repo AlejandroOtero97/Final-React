@@ -8,3 +8,8 @@ body{
     background-image: url("https://wallpapercave.com/wp/wp4363086.jpg");
     background-size: cover;
 }
+
+h2 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

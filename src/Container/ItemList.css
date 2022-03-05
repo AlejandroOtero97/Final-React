@@ -1,0 +1,37 @@
+h2 i {
+    color: rgb(255, 255, 255);
+    animation: flip 2s linear;
+    margin-right: 10px;
+}
+
+.card{
+    width: 20rem;
+    height: 24rem;
+    margin-bottom: 5%;
+    background-color: rgb(24, 24, 24);
+    border: 1px solid purple;
+    margin: 1rem;
+}
+
+.card img{
+    width: 100%;
+    height: 8rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container h2{
+    text-align: center;
+}
+
+@keyframes flip {
+    from, 100% {
+    transform: rotate(0);
+    }
+    to {
+    transform: rotate(180deg);
+    }
+}

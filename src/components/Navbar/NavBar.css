@@ -1,4 +1,8 @@
 nav {
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(206, 206, 206);
     text-shadow: 1.5px 2px white;
+}
+
+i{
+    color: rgb(0, 0, 0);
 }
