@@ -19,7 +19,7 @@ function ItemListContainer({ saludo }){
             <div className="container">
                 {loading ? <h2><i className="fa-regular fa-hourglass"></i>Loading...</h2>
                 :
-                prods.map((prod)=> 
+                prods.map((prod)=>
                                     <div className="card">
                                         <img className="card-img-top" src={prod.imgUrl} alt="Card" />
                                         <div className="card-body">
