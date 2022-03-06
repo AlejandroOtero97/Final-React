@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getFetch } from '../helpers/gFetch';
 
-function ItemListContainer({ saludo }){
+function ItemListContainer(){
     const [bool, setBool] = useState(true)
     const [loading, setLoading] = useState(true)
     const [prods, setProds] = useState([])

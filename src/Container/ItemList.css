@@ -4,27 +4,34 @@ h2 i {
     margin-right: 10px;
 }
 
-.card{
+.container {
+    max-width: 1500px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
     width: 20rem;
     height: 24rem;
     margin-bottom: 5%;
     background-color: rgb(24, 24, 24);
     border: 1px solid purple;
     margin: 1rem;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
-.card img{
+.card img {
     width: 100%;
     height: 8rem;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
+.container h2 {
+    text-align: center;
 }
 
-.container h2{
-    text-align: center;
+.card .btn{
+    position: relative;
+    align-items: baseline;
 }
 
 @keyframes flip {
