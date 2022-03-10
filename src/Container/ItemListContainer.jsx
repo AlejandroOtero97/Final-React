@@ -12,10 +12,17 @@ function ItemListContainer(){
         .catch((err) => console.log(err))
         .finally(()=> setLoading(false))
         }, [])
-    
+
+    function Greeting(props) {
+        return(
+            <h1>{props.greeting}</h1>
+        )
+    }
 
     return(
         <>
+            <Greeting greeting="Welcome to the React Shop"/>
+
             <div className="container">
                 {loading ? <h2><i className="fa-regular fa-hourglass"></i>Loading...</h2>
                 :

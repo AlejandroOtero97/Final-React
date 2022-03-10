@@ -4,16 +4,15 @@ import './components/Navbar/NavBar.css'
 import './Container/ItemList.css'
 import NavBar from './components/Navbar/NavBar';
 import ItemListContainer from './Container/ItemListContainer.jsx';
-import Greeting from './Container/ItemListContainer.js'
 
 
-function App(greeting) {
+function App() {
+
   return (
 
     <>
       <NavBar />
-      <Greeting />
-      <ItemListContainer />
+      <ItemListContainer greeting="Welcome to the React Shop"/>
     </>
 
   );
