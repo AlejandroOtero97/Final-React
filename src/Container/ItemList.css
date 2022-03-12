@@ -5,19 +5,30 @@ h2 i {
 }
 
 .container {
-    max-width: 1500px;
+    max-width: 1700px;
     display: flex;
     justify-content: center;
 }
 
 .card {
-    width: 20rem;
-    height: 24rem;
-    margin-bottom: 5%;
+    height: 100%;
+    display: flex;
     background-color: rgb(24, 24, 24);
     border: 1px solid purple;
-    margin: 1rem;
     box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.card-block {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.card.card-footer {
+    align-self: flex-end;
+    flex: 1 1 auto;
 }
 
 .card img {
@@ -33,6 +44,40 @@ h2 i {
     position: relative;
     align-items: baseline;
 }
+
+.inputContainer {
+    background-color: rgba(0, 0, 0, 0.336);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.btnv {
+    width: 3.5rem;
+    border-radius: 10px;
+    border: 2px solid purple;
+    background: #e6e6e6;
+}
+
+.btnf {
+    width: 8rem;
+    border-radius: 10px;
+    border: 2px solid green;
+    background: #e6e6e6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes flip {
     from, 100% {
