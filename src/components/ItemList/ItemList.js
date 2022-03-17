@@ -5,13 +5,13 @@ const productos = [
     {id: 4, name: 'HalfLife',stock:8 ,price:3000 ,desc:"Aliens everywhere, lets hope gordon helps",imgUrl:"https://i.blogs.es/854de1/1585597051_181597_1585597106_noticia_normal/1366_2000.jpeg"},
     {id: 5, name: 'Terraria',stock:6 ,price:3500 ,desc:"Keep mining until you hit the underworld", imgUrl:"https://kosgames.com/wp-content/uploads/2021/08/b7c65e77a5f126a1024a8459ec0fd08f879860f1.jpeg"}]
 
-export const getFetch = new Promise((resolve, reject)=>{
+export const ItemList = new Promise((resolve, reject)=>{
     let condition = true
     if(condition){
         setTimeout(() => {
             resolve(productos)
         }, 3000);
     }else{
-        reject("400 - not found")
+        reject("404 - not found")
     }
 })
