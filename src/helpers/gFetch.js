@@ -17,17 +17,3 @@ export const getFetch = new Promise((resolve, reject)=>{
     }
 })
 
-const producto = {id: "1", name: 'GTA 5', stock:5 ,price:1500 ,desc:"Destroy cars, rob people and have fun",    imgUrl:"https://i0.wp.com/hipertextual.com/wp-content/uploads/2021/05/GTA-5-1-scaled.jpg?fit=2560%2C1439&ssl=1"}
-
-export const getFetchOne = new Promise((resolve, reject)=>{
-    //acciones 
-    let condition = true
-    if (condition) {
-        setTimeout(() => {
-            resolve(producto)                    
-        }, 3000);
-    } else {
-        reject('400 - not found')        
-    }
-})
-

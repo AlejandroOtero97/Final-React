@@ -4,7 +4,7 @@ import ItemDetail from "../../components/ItemDetail/ItemDetail"
 import { getFetch } from "../../helpers/gFetch"
 
 
-function ItemDetailContianer({id}) {
+function ItemDetailContianer() {
     const [producto, setProducto] = useState({})
 
     const { detalleId } = useParams() 
@@ -15,7 +15,7 @@ function ItemDetailContianer({id}) {
         .then(prod => setProducto(prod))
         .catch(err => console.log(err))
 
-    }, [id])
+    },)
     
     return (
         <div>
