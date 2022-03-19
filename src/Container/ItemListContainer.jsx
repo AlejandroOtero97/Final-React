@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { getFetch } from '../helpers/gFetch';
-import { useParams } from "react-router-dom";
-import ItemList from "../components/ItemList/ItemList";
+import { useEffect, useState } from "react"
+import { getFetch } from '../helpers/gFetch'
+import { useParams } from "react-router-dom"
+import ItemList from "../components/ItemList/ItemList"
 
 
 
@@ -26,6 +26,7 @@ function ItemListContainer(){
     return(
         <>
             <Greeting greeting="Welcome to the React Shop"/>
+            <h5 className="title-second">Browse through our game catalog</h5>
                 {loading ? 
                     <h2><i className="fa-regular fa-hourglass"></i>Loading...</h2>
                     :

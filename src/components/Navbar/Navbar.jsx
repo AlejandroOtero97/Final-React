@@ -4,14 +4,12 @@ import Navbar from "react-bootstrap/Navbar"
 import Widget from '../Widget/Widget'
 
 
-
-
 function NavBar() {
   return (
     
     <Navbar collapseOnSelect>
         <Container>
-            <Navbar.Brand href="/">MoebiuzShop</Navbar.Brand>
+            <Navbar.Brand href="/" className='brand'>Moebiuz<strong>Shop</strong></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">

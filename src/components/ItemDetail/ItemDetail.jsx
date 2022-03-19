@@ -1,16 +1,16 @@
 import ItemCount from "../ItemCount/ItemCount"
 import "../ItemDetail/ItemDetail.css"
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap'
 
 function ItemDetail({producto}) {
 
-  const {imgUrl, id, name, desc, price, stock} = producto;
+  const {imgSource, id, name, desc, price, stock} = producto;
 
   return (
 
         <div className="container">
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={imgUrl} />
+              <Card.Img variant="top" src={imgSource} />
               <Card.Body>
                 <Card.Title>{id}-{name}</Card.Title>
                 <Card.Text>
