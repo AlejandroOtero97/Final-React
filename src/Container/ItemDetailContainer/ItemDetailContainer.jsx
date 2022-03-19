@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemDetail from "../../components/ItemDetail/ItemDetail"
-import { getFetchOne } from "../../helpers/gFetch"
+import { getFetch } from "../../helpers/gFetch"
 
 
-function ItemDetailContianer() {
+function ItemDetailContianer({id}) {
     const [producto, setProducto] = useState({})
 
     const { detalleId } = useParams() 
     
     useEffect(()=>{
-        getFetchOne
+        getFetch
+        .then(prod => prod.find(item => item.id === detalleId))
         .then(prod => setProducto(prod))
         .catch(err => console.log(err))
 
-    }, [])
+    }, [id])
     
     return (
         <div>

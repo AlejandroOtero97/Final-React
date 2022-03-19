@@ -5,7 +5,6 @@ h2 i {
 }
 
 .container {
-    max-width: 1700px;
     display: flex;
     justify-content: center;
 }

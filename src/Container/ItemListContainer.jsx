@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getFetch } from '../helpers/gFetch';
 import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList/ItemList";
-import ItemCount from "../components/ItemCount/ItemCount"
+
 
 
 function ItemListContainer(){
@@ -24,17 +24,17 @@ function ItemListContainer(){
     }
 
     return(
-        <div className="container">
+        <>
             <Greeting greeting="Welcome to the React Shop"/>
-             {loading ? 
-                <h2><i className="fa-regular fa-hourglass"></i>Loading...</h2>
-                :
-                prods.map((prod)=>
-                    <ItemList prods={prods} />        
-          )}
-            
-            <ItemCount stock={prods.stock} initial={1} />
-        </div>
+            <div className="container">
+                {loading ? 
+                    <h2><i className="fa-regular fa-hourglass"></i>Loading...</h2>
+                    :
+                    prods.map((prod)=>
+                        <ItemList prods={prods} />        
+            )}
+            </div>
+        </>
     )
 }
 
