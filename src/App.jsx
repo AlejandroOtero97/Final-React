@@ -15,7 +15,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<ItemListContainer greeting="Welcome to the React Shop" />} />
                         <Route path='/detalle/:detalleId' element={<ItemDetailContainer />}/>
-                        <Route path='/cart' element={<Cart />}/>
+                        <Route path='/Cart' element={<Cart />}/>
                         <Route path='/*' element={<Navigate to='/' />} />
                     </Routes>
                 </div>

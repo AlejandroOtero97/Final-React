@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+body {
+    background: linear-gradient(
+        180deg,
+        rgba(45, 20, 44, 1)100%,
+        rgba(81, 10, 50, 1)0%
+        );
+        height: 100vh;
+}
+
 .App {
     color: white;
     text-align: center;
