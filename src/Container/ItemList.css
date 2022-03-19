@@ -4,65 +4,32 @@ h2 i {
     margin-right: 10px;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-}
-
 .card {
-    height: 100%;
-    display: flex;
-    background-color: rgb(24, 24, 24);
-    border: 1px solid purple;
-    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
-    margin-left: 1rem;
-    margin-right: 1rem;
+    background-color: #343A3F;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1px;
+    margin: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: none;
+    color: white;
 }
 
-.card-block {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+.link {
+    color: white;
+    text-decoration: none;
 }
 
-.card.card-footer {
-    align-self: flex-end;
-    flex: 1 1 auto;
+.button-card {
+    background-color: #343A3F;
+    border-radius: 0px;
+    border: 3px solid white;
 }
 
-.card img {
-    width: 100%;
-    height: 8rem;
+.card:hover{
+    box-shadow: 5px 5px 0 rgba(255, 255, 255, 0.459);
+    transition: 200ms ease-in-out;
 }
 
-.container h2 {
-    text-align: center;
-}
-
-.card .btn{
-    position: relative;
-    align-items: baseline;
-}
-
-.inputContainer {
-    background-color: rgba(0, 0, 0, 0.336);
-    border-radius: 10px;
-    padding: 15px;
-}
-
-.btnv {
-    width: 3.5rem;
-    border-radius: 10px;
-    border: 2px solid purple;
-    background: #e6e6e6;
-}
-
-.btnf {
-    width: 8rem;
-    border-radius: 10px;
-    border: 2px solid green;
-    background: #e6e6e6;
-}
 
 @keyframes flip {
     from, 100% {

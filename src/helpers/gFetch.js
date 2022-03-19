@@ -11,7 +11,7 @@ export const getFetch = new Promise((resolve, reject)=>{
     if(condition){
         setTimeout(() => {
             resolve(productos)
-        }, 3000);
+        }, 0);
     }else{
         reject("404 - not found")
     }

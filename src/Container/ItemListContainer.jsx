@@ -26,13 +26,11 @@ function ItemListContainer(){
     return(
         <>
             <Greeting greeting="Welcome to the React Shop"/>
-            <div className="container">
                 {loading ? 
                     <h2><i className="fa-regular fa-hourglass"></i>Loading...</h2>
                     :
-                    <ItemList prods={prods} />        
+                    <ItemList prods={prods} />                       
             }
-            </div>
         </>
     )
 }

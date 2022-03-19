@@ -1,24 +1,25 @@
 import { Link } from "react-router-dom"
+import { Card, Button } from 'react-bootstrap';
+
 
 function Item({prod}) {
-  const {imgUrl, id, name, desc, price} = prod;
+  const {imgUrl, id, name, desc} = prod;
 
   return (
-    <>
-     
-        <div className="card">
-          
-           <img className="card-img-top" src={imgUrl} alt="Card" />
-           <div className="card-body card-block">
-                <h5 className="card-title">{id}-{name}</h5>
-                <Link to={`detalle/${id}`}>
-                  <p className="card-text">{desc}</p>
-                </Link>
-                <p href="#" className="btn btn-primary">Valor:{price}</p>
-           </div>
+        <div className="container d-flex justify-content-center">
+            <Card className="card" style={{ width: '18rem' }}>
+              <Card.Img variant="top" src={imgUrl} />
+              <Card.Body>
+                <Card.Title>{id}-{name}</Card.Title>
+                  <Card.Text className="card-body">
+                    {desc}
+                  </Card.Text>
+                  <Link to={`detalle/${id}`} className="link">
+                    <Button className="button-card">More Info</Button>
+                  </Link>
+              </Card.Body>
+            </Card>
         </div>
-       
-    </>
   )
 }
 
