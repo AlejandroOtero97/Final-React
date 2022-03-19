@@ -30,9 +30,8 @@ function ItemListContainer(){
                 {loading ? 
                     <h2><i className="fa-regular fa-hourglass"></i>Loading...</h2>
                     :
-                    prods.map((prod)=>
-                        <ItemList prods={prods} />        
-            )}
+                    <ItemList prods={prods} />        
+            }
             </div>
         </>
     )
