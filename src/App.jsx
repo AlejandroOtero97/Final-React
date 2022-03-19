@@ -5,6 +5,8 @@ import ItemListContainer from './Container/ItemListContainer.jsx';
 import Cart from './components/Cart/Cart';
 import ItemDetailContainer from './Container/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import 'animate.css/animate.min.css';
+
 
 function App() {
 

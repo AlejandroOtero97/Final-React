@@ -7,7 +7,7 @@ function Item({prod}) {
 
   return (
 
-        <Card className="card" style={{ width: '18rem', height: '24rem', marginBottom: '15px' }}>
+        <Card className="card animate__animated animate__fadeInUp mb-4">
           <div className="overflow">
             <Card.Img className="card-img-top" src={imgSource} />
           </div>

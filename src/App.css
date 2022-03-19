@@ -46,6 +46,13 @@ h2 i {
 strong {
     color: gold;
     text-shadow: 1.5px 2px rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+.brand-title {
+    font-size: 25px;
+    text-decoration: overline;
+    cursor: pointer;
 }
 
 .brand {
@@ -59,6 +66,12 @@ strong {
     font-family: 'Courier New', Courier, monospace;
     text-shadow: none;
     color: white;
+    width: 18rem;
+    height: 24rem;
+}
+
+.card-body {
+    padding: 10px 2px;
 }
 
 .link {
@@ -69,6 +82,12 @@ strong {
 .button-card {
     background-color: #343A3F;
     border-radius: 0px;
+    border: 3px solid white;
+}
+
+.button-card:hover {
+    background-color: rgba(156, 159, 161, 0.575);
+    box-shadow: 3px 2px 0 #fff, 10px 10px 0 rgba(0,0,0,0.2);
     border: 3px solid white;
 }
 
@@ -90,10 +109,51 @@ strong {
 
 .card-img-top {
     transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: 9vw;
+    object-fit: cover;
 }
 
 .card-img-top:hover {
     transform: scale(1.5);
+}
+
+.inputContainer { 
+    background-color: rgba(0, 0, 0, 0.336); 
+    border-radius: 10px; 
+    padding: 15px; 
+    width: 12rem;
+} 
+ 
+.btnv { 
+    width: 3.5rem; 
+    border-radius: 10px; 
+    border: 3px solid purple; 
+    background: #e6e6e6; 
+} 
+ 
+.btnf { 
+    width: 8rem; 
+    border-radius: 10px; 
+    border: 3px solid rgb(185, 182, 0); 
+    background: #e6e6e6; 
+}
+
+.imgSource {
+    width: 100%;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.486);
+    border-radius: 10px;
+}
+
+.column-2 {
+    background-color: #0c0c0cb2;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.486);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes flip {
@@ -102,5 +162,11 @@ strong {
     }
     to {
     transform: rotate(180deg);
+    }
+}
+
+@media (max-width: 700px) {
+    .card {
+        height: 12rem;
     }
 }

@@ -9,7 +9,7 @@ function NavBar() {
     
     <Navbar collapseOnSelect>
         <Container>
-            <Navbar.Brand href="/" className='brand'>Moebiuz<strong>Shop</strong></Navbar.Brand>
+            <Navbar.Brand href="/" className='brand'><label className='brand-title'>Moebiuz</label><strong>Shop</strong></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
