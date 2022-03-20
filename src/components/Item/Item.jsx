@@ -13,7 +13,7 @@ function Item({prod}) {
           </div>
           
           <Card.Body>
-            <Card.Title>{id}-{name}</Card.Title>
+            <Card.Title>{name}</Card.Title>
               <Card.Text className="card-body">
                 {desc}
               </Card.Text>
