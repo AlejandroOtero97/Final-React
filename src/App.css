@@ -6,7 +6,8 @@ body {
         rgba(45, 20, 44, 1)100%,
         rgba(81, 10, 50, 1)0%
         );
-        height: 100vh;
+        min-height: 100%;
+
 }
 
 .App {
@@ -47,6 +48,29 @@ strong {
     color: gold;
     text-shadow: 1.5px 2px rgb(0, 0, 0);
     text-decoration: underline;
+}
+
+footer {
+    background-color: #00000098;
+}
+
+footer p {
+    margin: 0;
+}
+
+select {
+    padding: 15px;
+    background-color: #232629;
+    color: white;
+    border:  1px solid orange;
+    box-shadow: 5px 5px 5px 0px rgb(250, 135, 82);
+    position: absolute;
+    top: 120px;
+    right: 100px;
+}
+
+.footer-bottom {
+    font-style: italic;
 }
 
 .brand-title {

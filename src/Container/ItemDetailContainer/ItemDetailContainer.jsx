@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import ItemDetail from "../../components/ItemDetail/ItemDetail"
 import { getFetch } from "../../helpers/gFetch"
+import ItemDetail from "../../components/ItemDetail/ItemDetail"
+
 
 
 function ItemDetailContianer() {
@@ -19,10 +20,13 @@ function ItemDetailContianer() {
     
     return (
         <>
-                {loading ? 
+                {loading ?
                     <h2><i className="mt-5 fa-regular fa-hourglass"></i>Loading your game's details...</h2>
                     :
-                    <ItemDetail producto={producto} />                       
+                    <div>
+                        <ItemDetail producto={producto} />
+                    </div>
+                                          
             }
         </>
     )

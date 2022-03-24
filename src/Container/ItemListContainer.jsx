@@ -22,14 +22,19 @@ function ItemListContainer(){
     }
 
     return(
-        <>  <div className="animate__animated animate__fadeInDown">
+        <>  
+            <div className="animate__animated animate__fadeInDown">
                 <Greeting greeting="Welcome to the React Shop"/>
                 <h5 className="title-second">Browse through our game catalog</h5>
             </div>
                 {loading ? 
                     <h2><i className="fa-regular fa-hourglass"></i>Loading...</h2>
                     :
-                    <ItemList prods={prods} />                       
+                    <div>
+                        
+                        <ItemList prods={prods} /> 
+                    </div>
+                                          
             }
 
 
