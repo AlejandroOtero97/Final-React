@@ -11,7 +11,6 @@ function Item({prod}) {
           <div className="overflow">
             <Card.Img className="card-img-top" src={imgSource} />
           </div>
-          
           <Card.Body>
             <Card.Title>{name}</Card.Title>
               <Card.Text className="card-body">

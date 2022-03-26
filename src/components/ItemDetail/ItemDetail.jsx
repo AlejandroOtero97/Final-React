@@ -3,10 +3,8 @@ import { Row, Col } from 'react-bootstrap';
 
 
 function ItemDetail({producto}) {
-
   const {imgSource, name, descExtra, price, stock} = producto;
 
-  
 
   return (
 

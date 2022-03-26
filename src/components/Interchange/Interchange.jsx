@@ -6,7 +6,7 @@ const ButtonCount= ({handleInput})=> {
         <button 
             className="button-buy" 
             onClick={handleInput}>
-                Add to Cart
+                Buy!
         </button>
     )
 }
@@ -17,7 +17,7 @@ const InputCount= ()=> {
             <button 
                 className="button-finish" 
                 onClick={()=>console.log("cart") }>
-                    Go to Cart
+                    To Cart!
             </button>
         </Link>
     )

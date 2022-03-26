@@ -25,8 +25,7 @@ function ItemDetailContianer() {
                     :
                     <div>
                         <ItemDetail producto={producto} />
-                    </div>
-                                          
+                    </div>                            
             }
         </>
     )
