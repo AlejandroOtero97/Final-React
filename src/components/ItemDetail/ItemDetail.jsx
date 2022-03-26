@@ -1,9 +1,12 @@
-import ItemCount from "../ItemCount/ItemCount"
-import { Row, Col } from 'react-bootstrap'
+import ItemCount from "../ItemCount/ItemCount";
+import { Row, Col } from 'react-bootstrap';
+
 
 function ItemDetail({producto}) {
 
   const {imgSource, name, descExtra, price, stock} = producto;
+
+  
 
   return (
 

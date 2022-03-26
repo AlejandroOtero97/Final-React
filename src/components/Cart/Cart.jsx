@@ -1,6 +1,8 @@
 
 
-function Cart() {
+function Cart({count}) {
+
+
   return (
     <>
       Cart
