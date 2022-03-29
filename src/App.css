@@ -98,6 +98,10 @@ select {
     margin-right: 15px;
 }
 
+.links:hover {
+    color: black;
+}
+
 .button-card {
     background-color: #343A3F;
     border-radius: 0px;
