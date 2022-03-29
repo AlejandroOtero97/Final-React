@@ -50,14 +50,6 @@ strong {
     text-decoration: underline;
 }
 
-footer {
-    background-color: #00000098;
-}
-
-footer p {
-    margin: 0;
-}
-
 select {
     padding: 15px;
     background-color: #232629;
@@ -67,10 +59,6 @@ select {
     position: absolute;
     top: 120px;
     right: 100px;
-}
-
-.footer-bottom {
-    font-style: italic;
 }
 
 .brand-title {
@@ -101,6 +89,13 @@ select {
 .link {
     color: white;
     text-decoration: none;
+}
+
+.links {
+    color: rgba(0,0,0,.55);
+    margin-top: 6px;
+    text-decoration: none;
+    margin-right: 15px;
 }
 
 .button-card {

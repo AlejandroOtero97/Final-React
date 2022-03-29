@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container'
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import Widget from '../Widget/Widget'
-
+import { NavLink } from 'react-router-dom'
 
 function NavBar() {
   return (
@@ -13,8 +13,8 @@ function NavBar() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-                <Nav.Link href="/ItemListContainer">Games</Nav.Link>
-                <Nav.Link href="#WIP">Parts</Nav.Link>
+                <NavLink to="categoria/games" className="links">Games</NavLink>
+                <NavLink to="categoria/parts" className="links">Parts</NavLink>
             </Nav>
             <Nav>   
                 <Nav.Link eventKey={2} href="/Cart">

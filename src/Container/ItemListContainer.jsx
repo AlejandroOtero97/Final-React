@@ -22,7 +22,7 @@ function ItemListContainer(){
     }
 
     return(
-        <>  
+        <> 
             <div className="animate__animated animate__fadeInDown">
                 <Greeting greeting="Welcome to the React Shop"/>
                 <h5 className="title-second">Browse through our game catalog</h5>
@@ -36,7 +36,6 @@ function ItemListContainer(){
                     </div>
                                           
             }
-
 
         </>
     )

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Interchange from '../Interchange/Interchange';
  
-function ItemCount ( { stock, initial } ){ 
+function ItemCount ( { stock, initial, onAdd } ){ 
     const [ count, setCount ] = useState(initial) 
  
     function handleIncrease() { 
@@ -16,6 +16,9 @@ function ItemCount ( { stock, initial } ){
         } 
     } 
  
+    const agregar = () => {
+        onAdd( count )
+    }
  
   return ( 
     <> 
@@ -24,10 +27,13 @@ function ItemCount ( { stock, initial } ){
                 <div> 
                     <button className='btnv' onClick={handleDecrease}>-</button> 
                     <label>{count}</label> 
-                    <button className='btnv' onClick={handleIncrease}>+</button> 
-                </div> 
+                    <button className='btnv' onClick={handleIncrease}>+</button>
+                    
+                </div>
+                <button onClick={ agregar }>Add to Cart</button>
                 <Interchange />
-            </div> 
+            </div>
+            
         </div> 
     </> 
   ) 

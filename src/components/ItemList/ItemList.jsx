@@ -1,7 +1,7 @@
 import Item from "../Item/Item"
 
-
 function ItemList({ prods }) {
+
     return (
         <div className="container d-flex justify-content-center align-items-center">
             <div className="row">
