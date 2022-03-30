@@ -1,33 +1,45 @@
 import { useCartContext } from './../../context/CartContext';
-import { Card, Button } from 'react-bootstrap'
-
+import { Button } from 'react-bootstrap'
+import { v4 as uuidv4 } from 'uuid';
 
 function Cart() {
 
   const { cartList, emptyCart } = useCartContext();
   return (
     <>
-      {cartList.map(prod => 
-        <div className="col-md-3" key={prod.id}>
-          <Card className="card animate__animated animate__fadeInUp m-4">
-            <div className="overflow">
-              <Card.Img className="card-img-top" src={prod.imgSource} />
-            </div>
-            <Card.Body>
-              <Card.Title>{prod.name}</Card.Title>
-                <Card.Text className="card-body">
-                  {prod.desc}
-                 
-                </Card.Text>
-                <Card.Text>
-                  Price: ${prod.price * prod.cantidad}
-                </Card.Text>
-            </Card.Body>
-            Quantity: {prod.cantidad}
-          </Card>
-        </div>
-        )}
-        <Button onClick={emptyCart} className="button-card">Empty Cart</Button>
+      
+      <div className='tables'>
+        <table>
+          <thead>
+            <tr>
+              <th>Identificacion</th>
+              <th>Nombre</th>
+              <th>Categoria</th>
+              <th>Descripcion</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Total</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+          {cartList.map(prod => 
+            <tr key={uuidv4()}>
+              <td>{prod.id} </td>
+              <td>{prod.name} </td>
+              <td>Games</td>
+              <td>{prod.desc} </td>
+              <td>{prod.cantidad} </td>
+              <td>{prod.price} </td>
+              <td>{prod.price * prod.cantidad} </td>
+              <td><Button>Quitar Item</Button></td>
+            </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+        
+      <Button onClick={emptyCart} className="button-card">Empty Cart</Button>
     </>
   )
 }
