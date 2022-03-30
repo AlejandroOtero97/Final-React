@@ -5,9 +5,9 @@ import { v4 as uuidv4 } from 'uuid';
 function Cart() {
 
   const { cartList, emptyCart } = useCartContext();
+  
   return (
     <>
-      
       <div className='tables'>
         <table>
           <thead>
