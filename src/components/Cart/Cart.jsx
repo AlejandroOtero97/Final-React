@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 function Cart() {
 
-  const { cartList, emptyCart } = useCartContext();
+  const { cartList, emptyCart, deleteItem } = useCartContext();
   
   return (
     <>
@@ -32,14 +32,14 @@ function Cart() {
               <td>{prod.cantidad} </td>
               <td>{prod.price} </td>
               <td>{prod.price * prod.cantidad} </td>
-              <td><Button>Quitar Item</Button></td>
+              <td><Button className='button-card' onClick={()=>deleteItem(prod.id)}>Quitar Item</Button></td>
             </tr>
             )}
           </tbody>
         </table>
       </div>
         
-      <Button onClick={emptyCart} className="button-card">Empty Cart</Button>
+      <Button onClick={emptyCart} className="button-card space">Empty Cart</Button>
     </>
   )
 }

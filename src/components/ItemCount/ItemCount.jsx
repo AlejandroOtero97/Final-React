@@ -16,7 +16,7 @@ function ItemCount ( { stock, initial, onAdd } ){
         } 
     } 
  
-    const agregar = () => {
+    const add = () => {
         onAdd( count )
     }
  
@@ -30,7 +30,7 @@ function ItemCount ( { stock, initial, onAdd } ){
                     <button className='btnv' onClick={handleIncrease}>+</button>
                     
                 </div>
-                <button onClick={ agregar }>Add to Cart</button>
+                <button onClick={ add } className="add">Add to Cart</button>
                 <Interchange />
             </div>
             

@@ -192,6 +192,24 @@ select {
     background: linear-gradient(90deg, rgba(111,23,72,1) 0%, rgba(251,93,94,1) 100%);
 }
 
+.add {
+    background-color: white;
+    color: black;
+    border: 3px solid purple;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.add:hover,  .btnv:hover {
+    background-color: #cccccc;
+    border: 3px solid rgb(82, 0, 82);
+}
+
+.space {
+    margin-top: 2%
+}
+
 .button-buy:hover {
     box-shadow: 2px 4px 8px 0px rgb(185, 185, 185);
     color: white;
@@ -216,7 +234,13 @@ select {
 table, th, td {
     border:1px solid black;
     padding: 1rem;
+    background-color: #1a1b1b83;
 }
+
+table {
+    width: 100%;
+}
+
 .tables {
     display: flex;
     align-items: center;

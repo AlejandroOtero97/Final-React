@@ -30,6 +30,11 @@ function CartContextProvider({children}) {
         }
     }
 
+    const deleteItem = (id) => {
+        const aux = cartList.filter((item)=> item.id !== id)
+        setCartList(aux);
+    }
+
 
     console.log(cartList);
 
@@ -37,6 +42,7 @@ function CartContextProvider({children}) {
         <CartContext.Provider value={{ 
             cartList,
             addToCart,
+            deleteItem,
             emptyCart
         }}>
             { children }
