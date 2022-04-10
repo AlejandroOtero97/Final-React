@@ -4,8 +4,8 @@ body {
     min-height: 100%;
     background: linear-gradient(
         180deg,
-        rgba(45, 20, 44, 1)100%,
-        rgba(81, 10, 50, 1)0%
+        rgba(45, 20, 44, 1) 100%,
+        rgba(81, 10, 50, 1) 0%
         );
         
 
@@ -60,6 +60,9 @@ select {
     position: absolute;
     top: 120px;
     right: 100px;
+}
+.id-prod {
+    font-size: 10px;
 }
 
 .brand-title {

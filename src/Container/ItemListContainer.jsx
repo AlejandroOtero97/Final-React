@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
-//import { getFetch } from '../helpers/gFetch'
+import { getFetch } from '../helpers/gFetch'
 import { useParams } from "react-router-dom"
 import ItemList from "../components/ItemList/ItemList"
 
+/*
 import { 
     collection,    
     getDocs, 
@@ -10,6 +11,7 @@ import {
     query, 
     where 
 } from 'firebase/firestore'
+*/
 
 function ItemListContainer(){
     const [loading, setLoading] = useState(true)
@@ -17,23 +19,33 @@ function ItemListContainer(){
     const { id, idCategory } = useParams()
   
     useEffect(()=> {
-        console.log(id)
-        const db = getFirestore()    
-
-        const queryCollectionFinal =  !id 
-                            ? 
-                                collection(db, 'item' )
-                            :  
-                                query( collection(db, 'item' ), 
-                                    where('categoria','==', id)                                  
-                                )                             
-
-        getDocs(queryCollectionFinal)
-        .then(resp => setProds( resp.docs.map(producto =>( {id: producto.id, ...producto.data()}) ) ) )
-        .catch(err => console.log(err))
-        .finally(()=> setLoading(false))   
-        
-    }, [id])   
+        /*
+        async function getAll() { 
+       
+            try { 
+                const db = getFirestore() 
+                const queryCollection =  collection(db, 'item') 
+     
+                const filterQuery = idCategory ? query(queryCollection, where('category', '==', idCategory)) : queryCollection 
+     
+                const response = await getDocs(filterQuery) 
+                setProds(response.docs.map( prod => ({ id: prod.id, ...prod.data() }) )); 
+                setLoading(false); 
+     
+            } catch (error) { 
+                 
+            } 
+                     
+            } 
+     
+            getAll(); 
+            */
+              getFetch  
+              .then(resp => setProds(resp)) 
+              .catch((err) => console.log(err)) 
+              .finally(()=> setLoading(false)) 
+     
+              }, [id, idCategory]) 
 
     function Greeting(props) {
         return(

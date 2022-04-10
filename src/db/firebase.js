@@ -13,6 +13,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export function getStore() {
+export const getStore = () => {
   return app;
-}
+};

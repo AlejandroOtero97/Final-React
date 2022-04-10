@@ -4,14 +4,14 @@ import { useCartContext } from './../../context/CartContext';
 
 
 
-function ItemDetail({producto}) {
-  const {imgSource, name, descExtra, price, stock} = producto;
+function ItemDetail({prod}) {
+  const {imgSource, name, desc, price, stock} = prod;
 
   const {addToCart, cartList} = useCartContext()
 
   const onAdd=(count)=>{
     console.log(count);
-    addToCart({ ...producto, cantidad: count })
+    addToCart({ ...prod, cantidad: count })
   }
 
   console.log(cartList);
@@ -24,7 +24,7 @@ function ItemDetail({producto}) {
         </Col>
         <Col sm={4} className="column-2 text-center">
           <h2 className="mb-3 mt-2"> {name} </h2>
-          <h5 className="mb-3"> {descExtra} </h5>
+          <h5 className="mb-3"> {desc} </h5>
           <h3 className="price mb-3"> ${price} </h3>
           <div>
             <div className="flex mb-2">

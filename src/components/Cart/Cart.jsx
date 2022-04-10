@@ -25,13 +25,13 @@ function Cart() {
           <tbody>
           {cartList.map(prod => 
             <tr key={uuidv4()}>
-              <td>{prod.id} </td>
+              <td className='id-prod'>{prod.id} </td>
               <td>{prod.name} </td>
               <td>Games</td>
               <td>{prod.desc} </td>
               <td>{prod.cantidad} </td>
-              <td>{prod.price} </td>
-              <td>{prod.price * prod.cantidad} </td>
+              <td>${prod.price} </td>
+              <td>${prod.price * prod.cantidad} </td>
               <td><Button className='button-card' onClick={()=>deleteItem(prod.id)}>Quitar Item</Button></td>
             </tr>
             )}

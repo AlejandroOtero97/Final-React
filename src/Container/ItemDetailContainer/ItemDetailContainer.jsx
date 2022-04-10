@@ -25,7 +25,6 @@ function ItemDetailContainer() {
               
               setProducto( { id: response.id, ...response.data()} );
               setLoading(false);
-
             } catch (error) {
 
             }
@@ -49,7 +48,9 @@ function ItemDetailContainer() {
                     <h2><i className="mt-5 fa-regular fa-hourglass"></i>Loading your game's details...</h2>
                     :
                     <div>
-                        <ItemDetail producto={producto} />
+                        <ItemDetail 
+                            prod={producto} 
+                            key={producto.id} />
                     </div>                            
             }
         </>
