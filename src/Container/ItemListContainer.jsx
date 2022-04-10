@@ -3,7 +3,7 @@ import { getFetch } from '../helpers/gFetch'
 import { useParams } from "react-router-dom"
 import ItemList from "../components/ItemList/ItemList"
 
-/*
+
 import { 
     collection,    
     getDocs, 
@@ -11,7 +11,7 @@ import {
     query, 
     where 
 } from 'firebase/firestore'
-*/
+
 
 function ItemListContainer(){
     const [loading, setLoading] = useState(true)
@@ -19,7 +19,7 @@ function ItemListContainer(){
     const { id, idCategory } = useParams()
   
     useEffect(()=> {
-        /*
+    
         async function getAll() { 
        
             try { 
@@ -39,11 +39,11 @@ function ItemListContainer(){
             } 
      
             getAll(); 
-            */
-              getFetch  
-              .then(resp => setProds(resp)) 
-              .catch((err) => console.log(err)) 
-              .finally(()=> setLoading(false)) 
+       
+              //getFetch  
+              //.then(resp => setProds(resp)) 
+              //.catch((err) => console.log(err)) 
+              //.finally(()=> setLoading(false)) 
      
               }, [id, idCategory]) 
 

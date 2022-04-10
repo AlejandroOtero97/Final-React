@@ -16,8 +16,10 @@ function Item({prod}) {
                 <Card.Text className="card-body">
                   {prod.desc}
                 </Card.Text>
-                <Link to={`detalle/${prod.id}`} className="link">
+                <Link to={`details/${prod.id}`}>
+                  <button className="button-card">
                     More Info
+                  </button>
                 </Link>
             </Card.Body>
           </Card>
