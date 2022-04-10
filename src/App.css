@@ -71,6 +71,7 @@ select {
 
 .brand {
     font-size: 30px;
+    margin-right: 15px;
 }
 
 .card {
@@ -146,23 +147,8 @@ select {
 .inputContainer { 
     background-color: rgba(0, 0, 0, 0.336); 
     border-radius: 10px; 
-    padding: 15px; 
     width: 17rem;
 } 
- 
-.btnv { 
-    width: 3.5rem; 
-    border-radius: 10px; 
-    border: 3px solid purple; 
-    background: #e6e6e6; 
-} 
- 
-.btnf { 
-    width: 8rem; 
-    border-radius: 10px; 
-    border: 3px solid rgb(185, 182, 0); 
-    background: #e6e6e6; 
-}
 
 .imgSource {
     width: 100%;
@@ -188,9 +174,9 @@ select {
 .button-buy {
     text-align: center;
     border: none;
-    border-radius: 15px;
-    margin-top: 1rem;
-    padding: 12px;
+    border-radius: 4px;
+    margin: 0.5rem;
+    padding: 0.8rem;
     background: linear-gradient(90deg, rgba(111,23,72,1) 0%, rgba(251,93,94,1) 100%);
 }
 
@@ -221,9 +207,9 @@ select {
 .button-finish {
     text-align: center;
     border: none;
-    border-radius: 15px;
-    margin-top: 1rem;
-    padding: 12px;
+    border-radius: 4px;
+    margin: 0.5rem;
+    padding: 0.8rem;
     background: linear-gradient(90deg, rgb(66, 66, 66) 0%, rgb(62, 240, 91) 100%);
 }
 
@@ -271,12 +257,22 @@ table {
     .card {
         width: 16rem;
         height: 22rem;
+        margin: 4rem;
+        display: flex;
     }
 
     .App h1 {
         font-size: 35px;
     }
     .App h5 {
+        font-size: 15px;
+    }
+    .button-buy {
+        padding: 0.5rem;
+        font-size: 15px;
+    }
+    .button-finish {
+        padding: 0.5rem;
         font-size: 15px;
     }
 }

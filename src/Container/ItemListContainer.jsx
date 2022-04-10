@@ -1,19 +1,39 @@
 import { useEffect, useState } from "react"
-import { getFetch } from '../helpers/gFetch'
+//import { getFetch } from '../helpers/gFetch'
 import { useParams } from "react-router-dom"
 import ItemList from "../components/ItemList/ItemList"
+
+import { 
+    collection,    
+    getDocs, 
+    getFirestore,        
+    query, 
+    where 
+} from 'firebase/firestore'
 
 function ItemListContainer(){
     const [loading, setLoading] = useState(true)
     const [prods, setProds] = useState([])
     const { id } = useParams()
   
-      useEffect(()=>{
-          getFetch 
-          .then(resp => setProds(resp))
-          .catch((err) => console.log(err))
-          .finally(()=> setLoading(false))
-          }, [id])
+    useEffect(()=> {
+        console.log(id)
+        const db = getFirestore()    
+
+        const queryCollectionFinal =  !id 
+                            ? 
+                                collection(db, 'item' )
+                            :  
+                                query( collection(db, 'item' ), 
+                                    where('categoria','==', id)                                  
+                                )                             
+
+        getDocs(queryCollectionFinal)
+        .then(resp => setProds( resp.docs.map(producto =>( {id: producto.id, ...producto.data()}) ) ) )
+        .catch(err => console.log(err))
+        .finally(()=> setLoading(false))   
+        
+    }, [id])   
 
     function Greeting(props) {
         return(

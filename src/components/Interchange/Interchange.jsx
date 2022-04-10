@@ -29,14 +29,14 @@ const InterSwap = () => {
         setInput('input')
     }
     return (
-        <div> 
+        <> 
             {input === 'button' 
                 ? 
                 <ButtonCount handleInput={handleInput} />
                 : 
                 <InputCount />
             }
-        </div>
+        </>
     )
 }
 

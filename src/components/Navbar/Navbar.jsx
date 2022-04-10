@@ -11,16 +11,14 @@ function NavBar() {
         <Container>
             <NavLink to='/' className='brand'><label className='brand-title'>Moebiuz</label><strong>Shop</strong></NavLink>
 
-            <Navbar.Brand to="/" ></Navbar.Brand>
-
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-                <NavLink to="/categoria/games" className="links">Games</NavLink>
+                <NavLink to="/" className="links">Games</NavLink>
                 <NavLink to="/categoria/parts" className="links">Parts</NavLink>
             </Nav>
             <Nav>
-                <NavLink to='/Cart' eventKey={2}><Widget /></NavLink>
+                <NavLink to='/Cart'><Widget /></NavLink>
             </Nav>
             </Navbar.Collapse>
         </Container>

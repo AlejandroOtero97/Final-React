@@ -6,7 +6,7 @@ function ItemList({ prods }) {
         <div className="container d-flex justify-content-center align-items-center">
             <div className="row">
                 {prods.map((prod) => 
-                    <div className="col-md-3" key={prod.id}>
+                    <div className="col-md-4" key={prod.id}>
                         <Item key={prod.id} prod={prod} />
                     </div>
                 )}

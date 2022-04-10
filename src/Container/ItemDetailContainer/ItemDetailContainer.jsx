@@ -7,8 +7,10 @@ import ItemDetail from "../../components/ItemDetail/ItemDetail"
 
 function ItemDetailContianer() {
     const [producto, setProducto] = useState({})
-    const { detalleId } = useParams()
     const [loading, setLoading] = useState(true)
+    
+    const { detalleId } = useParams()
+    
     
     useEffect(()=>{
         getFetch
