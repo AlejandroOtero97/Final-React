@@ -9,17 +9,18 @@ function NavBar() {
     
     <Navbar collapseOnSelect>
         <Container>
-            <Navbar.Brand href="/" className='brand'><label className='brand-title'>Moebiuz</label><strong>Shop</strong></Navbar.Brand>
+            <NavLink to='/' className='brand'><label className='brand-title'>Moebiuz</label><strong>Shop</strong></NavLink>
+
+            <Navbar.Brand to="/" ></Navbar.Brand>
+
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-                <NavLink to="categoria/games" className="links">Games</NavLink>
-                <NavLink to="categoria/parts" className="links">Parts</NavLink>
+                <NavLink to="/categoria/games" className="links">Games</NavLink>
+                <NavLink to="/categoria/parts" className="links">Parts</NavLink>
             </Nav>
-            <Nav>   
-                <Nav.Link eventKey={2} href="/Cart">
-                    <Widget />
-                </Nav.Link>
+            <Nav>
+                <NavLink to='/Cart' eventKey={2}><Widget /></NavLink>
             </Nav>
             </Navbar.Collapse>
         </Container>
