@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import NavBar from './components/Navbar/NavBar';
-import ItemListContainer from './container/ItemListContainer.jsx';
+import NavBar from './components/Navbar/Navbar';
+import ItemListContainer from './Container/ItemListContainer.jsx';
 import Cart from './components/Cart/Cart';
-import ItemDetailContainer from './container/ItemDetailContainer/ItemDetailContainer';
+import ItemDetailContainer from './Container/ItemDetailContainer/ItemDetailContainer';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';

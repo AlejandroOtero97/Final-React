@@ -6,11 +6,12 @@ import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 
 
-function ItemDetailContianer() {
+function ItemDetailContainer() {
     const [producto, setProducto] = useState({})
     const [loading, setLoading] = useState(true)
     
-    const { detalleId } = useParams()
+    //const { detalleId } = useParams()
+    const { productId } = useParams()
     
     
     useEffect(()=>{
@@ -55,4 +56,4 @@ function ItemDetailContianer() {
     )
 }
 
-export default ItemDetailContianer
+export default ItemDetailContainer
