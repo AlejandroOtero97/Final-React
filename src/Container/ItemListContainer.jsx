@@ -14,7 +14,7 @@ import {
 function ItemListContainer(){
     const [loading, setLoading] = useState(true)
     const [prods, setProds] = useState([])
-    const { id } = useParams()
+    const { id, idCategory } = useParams()
   
     useEffect(()=> {
         console.log(id)

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { getFetch } from "../../helpers/gFetch"
+//import { getFetch } from "../../helpers/gFetch"
 import ItemDetail from "../../components/ItemDetail/ItemDetail"
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 
 
@@ -13,12 +14,33 @@ function ItemDetailContianer() {
     
     
     useEffect(()=>{
-        getFetch
-        .then(prod => prod.find(item => item.id === detalleId))
-        .then(prod => setProducto(prod))
-        .catch((err) => console.log(err))
-        .finally(()=> setLoading(false))
-    },)
+
+        async function getById() {
+
+            try {
+              const db = getFirestore();
+              const item = doc(db, 'item' , productId);
+              const response = await getDoc(item)
+              
+              setProducto( { id: response.id, ...response.data()} );
+              setLoading(false);
+
+            } catch (error) {
+
+            }
+            
+          }
+      
+          getById();
+
+        //getFetch
+        //.then(prod => prod.find(item => item.id === detalleId))
+        //.then(prod => setProducto(prod))
+        //.catch((err) => console.log(err))
+        //.finally(()=> setLoading(false))
+
+
+    }, [productId])
     
     return (
         <>
