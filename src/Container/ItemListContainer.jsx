@@ -1,19 +1,44 @@
 import { useEffect, useState } from "react"
-import { getFetch } from '../helpers/gFetch'
+//import { getFetch } from '../helpers/gFetch'
 import { useParams } from "react-router-dom"
 import ItemList from "../components/ItemList/ItemList"
+
+import { getDocs, collection, getFirestore, query, where } from 'firebase/firestore';
+
 
 function ItemListContainer(){
     const [loading, setLoading] = useState(true)
     const [prods, setProds] = useState([])
-    const { id } = useParams()
+    const { id, idCategory } = useParams()
   
       useEffect(()=>{
-          getFetch 
-          .then(resp => setProds(resp))
-          .catch((err) => console.log(err))
-          .finally(()=> setLoading(false))
-          }, [id])
+
+        async function getAll() {
+      
+        try {
+            const db = getFirestore()
+            const queryCollection =  collection(db, 'item')
+
+            const filterQuery = idCategory ? query(queryCollection, where('category', '==', idCategory)) : queryCollection
+
+            const response = await getDocs(filterQuery)
+            setProds(response.docs.map( prod => ({ id: prod.id, ...prod.data() }) ));
+            setLoading(false);
+
+        } catch (error) {
+            
+        }
+                
+        }
+
+        getAll();
+
+          //getFetch 
+          //.then(resp => setProds(resp))
+          //.catch((err) => console.log(err))
+          //.finally(()=> setLoading(false))
+
+          }, [id, idCategory])
 
     function Greeting(props) {
         return(
