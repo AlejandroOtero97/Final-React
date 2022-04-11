@@ -12,7 +12,7 @@ function Cart() {
         <table>
           <thead>
             <tr>
-              <th>Identificacion</th>
+              <th>Imagen</th>
               <th>Nombre</th>
               <th>Categoria</th>
               <th>Descripcion</th>
@@ -25,7 +25,7 @@ function Cart() {
           <tbody>
           {cartList.map(prod => 
             <tr key={uuidv4()}>
-              <td className='id-prod'>{prod.id} </td>
+              <td><img src={prod.imgSource} alt="foto" className='img-cart'/> </td>
               <td>{prod.name} </td>
               <td>Games</td>
               <td>{prod.desc} </td>

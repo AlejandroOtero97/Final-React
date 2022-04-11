@@ -61,6 +61,17 @@ select {
     top: 120px;
     right: 100px;
 }
+
+table, th, td {
+    border:1px solid black;
+    padding: 0.5rem;
+    background-color: #1a1b1b83;
+}
+
+table {
+    width: 100%;
+}
+
 .id-prod {
     font-size: 10px;
 }
@@ -86,6 +97,7 @@ select {
     color: white;
     width: 18rem;
     height: 24rem;
+    margin-bottom: 20px;
 }
 
 .card-body {
@@ -112,6 +124,8 @@ select {
     background-color: #343A3F;
     border-radius: 0px;
     border: 3px solid white;
+    color: white;
+    padding: 5px;
 }
 
 .button-card:hover {
@@ -222,21 +236,25 @@ select {
     transition: all 100ms ease-in-out;
 }
 
-table, th, td {
-    border:1px solid black;
-    padding: 1rem;
-    background-color: #1a1b1b83;
-}
-
-table {
-    width: 100%;
-}
-
 .tables {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+}
+
+.img-cart {
+    width: 100%;
+}
+
+.nav-counter {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    text-shadow: none;
+    font-size: 17px;
+    background-color: red;
+    border-radius: 18px;
+    padding: 0px 8px;
 }
 
 @keyframes flip {
@@ -260,8 +278,6 @@ table {
     .card {
         width: 16rem;
         height: 22rem;
-        margin: 4rem;
-        display: flex;
     }
 
     .App h1 {

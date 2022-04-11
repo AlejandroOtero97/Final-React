@@ -35,6 +35,9 @@ function CartContextProvider({children}) {
         setCartList(aux);
     }
 
+    const cantidad = () => {
+        return cartList.reduce((acum, item) => acum += item.cantidad, 0)
+    } 
 
     console.log(cartList);
 
@@ -43,7 +46,8 @@ function CartContextProvider({children}) {
             cartList,
             addToCart,
             deleteItem,
-            emptyCart
+            emptyCart,
+            cantidad
         }}>
             { children }
         </CartContext.Provider>
