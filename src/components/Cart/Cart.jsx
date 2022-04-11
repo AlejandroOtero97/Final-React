@@ -4,8 +4,30 @@ import { v4 as uuidv4 } from 'uuid';
 
 function Cart() {
 
-  const { cartList, emptyCart, deleteItem } = useCartContext();
+  const { cartList, emptyCart, deleteItem, sumaTotal } = useCartContext();
   
+  function generarOrden(e) {
+    e.preventDefault();
+
+      let orden = {}
+      
+      orden.buyer = {name: "ale", email:"loco@gmail.com", tel: "140588867"};
+
+      orden.total = sumaTotal();
+
+      orden.items = cartList.map(cartItem => {
+        const id = cartItem.id
+        const nombre = cartItem.name
+        const precio = cartItem.price * cartItem.cantidad
+
+        return {id, nombre, precio}
+      })
+    
+    
+      console.log(orden);
+  }
+
+
   return (
     <>
       <div className='tables'>
@@ -39,7 +61,12 @@ function Cart() {
         </table>
       </div>
         
-      <Button onClick={emptyCart} className="button-card space">Empty Cart</Button>
+      <div>
+        <h4 className='cart-orden space'> Total de la compra: ${sumaTotal()} </h4>
+        <Button onClick={emptyCart} className="button-card space">Empty Cart</Button>
+        <Button onClick={generarOrden} className="button-card space">Generar Orden</Button>
+      </div>
+      
     </>
   )
 }

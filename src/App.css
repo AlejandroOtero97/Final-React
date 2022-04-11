@@ -212,7 +212,13 @@ table {
 }
 
 .space {
-    margin-top: 2%
+    margin: 1.5rem 1rem;
+    padding: 10px;
+}
+
+.cart-orden {
+    text-decoration: underline;
+    text-transform: uppercase;
 }
 
 .button-buy:hover {

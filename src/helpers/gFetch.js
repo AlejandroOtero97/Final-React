@@ -19,4 +19,3 @@ export const getFetch = new Promise((resolve, reject)=>{
         reject("404 - not found")
     }
 })
-
