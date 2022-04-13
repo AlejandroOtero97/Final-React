@@ -1,19 +1,28 @@
 import { useCartContext } from './../../context/CartContext';
 import { Button } from 'react-bootstrap'
 import { v4 as uuidv4 } from 'uuid';
+import { useForm } from 'react-hook-form';
+
 
 function Cart() {
 
   const { cartList, emptyCart, deleteItem, sumaTotal } = useCartContext();
+  const { register, handleSubmit } = useForm();
   
-  function generarOrden(e) {
-    e.preventDefault();
+  const onSubmit = (data) => {
+    
+    console.log(data)
+    generarOrden(data);
+  }
+
+  function generarOrden(data) {
 
       let orden = {}
-      
-      orden.buyer = {name: "ale", email:"loco@gmail.com", tel: "140588867"};
+
+      orden.buyer = {data};
 
       orden.total = sumaTotal();
+      orden.date = new Date();
 
       orden.items = cartList.map(cartItem => {
         const id = cartItem.id
@@ -65,6 +74,22 @@ function Cart() {
         <h4 className='cart-orden space'> Total de la compra: ${sumaTotal()} </h4>
         <Button onClick={emptyCart} className="button-card space">Empty Cart</Button>
         <Button onClick={generarOrden} className="button-card space">Generar Orden</Button>
+
+        <form className='container-fluid bg-dark' onSubmit={handleSubmit(onSubmit)}>
+          <div className="mb-3">
+            <label className="form-label">Name</label>
+            <input type="text" className="form-control" placeholder='Alejandro Otero' name='name' {...register('name', { required: true })}/>
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Email</label>
+            <input type="email" className="form-control" placeholder='Example@gmail.com' name='email' {...register('email', { required: true })}/>
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Phone Number</label>
+            <input type="number" className="form-control" placeholder='11-4058-8867' name='phone' {...register('phone', { required: true })}/>
+          </div>
+          <button type="submit" className="btn btn-primary">Submit</button>
+        </form>
       </div>
       
     </>

@@ -211,6 +211,16 @@ table {
     border: 3px solid rgb(82, 0, 82);
 }
 
+.container-fluid {
+    width: 50%;
+}
+
+form {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
 .space {
     margin: 1.5rem 1rem;
     padding: 10px;
