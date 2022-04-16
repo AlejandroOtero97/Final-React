@@ -16,7 +16,7 @@ function Item({prod}) {
                 <Card.Text className="card-body">
                   {prod.desc}
                 </Card.Text>
-                <Link to={`details/${prod.id}`}>
+                <Link to={`/details/${prod.id}`}>
                   <button className="button-card">
                     More Info
                   </button>

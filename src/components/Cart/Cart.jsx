@@ -10,9 +10,7 @@ function Cart() {
   const { register, handleSubmit } = useForm();
   
   const onSubmit = (data) => {
-    
-    console.log(data)
-    generarOrden(data);
+    generarOrden(data)
   }
 
   function generarOrden(data) {
@@ -73,7 +71,6 @@ function Cart() {
       <div>
         <h4 className='cart-orden space'> Total de la compra: ${sumaTotal()} </h4>
         <Button onClick={emptyCart} className="button-card space">Empty Cart</Button>
-        <Button onClick={generarOrden} className="button-card space">Generar Orden</Button>
 
         <form className='container-fluid bg-dark' onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
@@ -88,7 +85,10 @@ function Cart() {
             <label className="form-label">Phone Number</label>
             <input type="number" className="form-control" placeholder='11-4058-8867' name='phone' {...register('phone', { required: true })}/>
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <div className='flex'>
+            <button type="submit" className="button-card">Generar Orden</button>
+          </div>
+          
         </form>
       </div>
       
