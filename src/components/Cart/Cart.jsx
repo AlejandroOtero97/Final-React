@@ -40,9 +40,7 @@ function Cart() {
 
       resultString += "Importe Total: $" + orden.total + `\n`;
 
-      alert(resultString)
-      console.log(orden.items)
-      
+      alert(resultString)  
   }
 
 
