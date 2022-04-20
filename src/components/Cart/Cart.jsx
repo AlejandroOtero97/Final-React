@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap'
 import { v4 as uuidv4 } from 'uuid';
 import { useForm } from 'react-hook-form';
 import './cart.css';
-
+import swal from 'sweetalert';
 
 function Cart() {
 
@@ -40,7 +40,7 @@ function Cart() {
 
       resultString += "Importe Total: $" + orden.total + `\n`;
 
-      alert(resultString)  
+      swal("Orden de Compra", resultString, "success")
   }
 
 
