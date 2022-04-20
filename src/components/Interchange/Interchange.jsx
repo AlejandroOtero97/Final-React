@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import './interchange.css';
 
 const ButtonCount= ({handleInput})=> {
     return (
         <button 
-            className="button-buy" 
+            className="interchange__button-buy" 
             onClick={handleInput}>
                 Buy!
         </button>
@@ -15,8 +16,7 @@ const InputCount= ()=> {
     return (
         <Link to='/cart' >
             <button 
-                className="button-finish" 
-                onClick={()=>console.log("cart") }>
+                className="interchange__button-finish">
                     To Cart!
             </button>
         </Link>

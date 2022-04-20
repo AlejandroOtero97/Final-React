@@ -1,21 +1,19 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import NavBar from './components/Navbar/Navbar';
-import Cart from './components/Cart/Cart';
-import ItemDetailContainer from './Container/ItemDetailContainer/ItemDetailContainer';
-import ItemListContainer from './Container/ItemListContainer.jsx';
+import { ItemDetailContainer, ItemListContainer } from './Container';
+import { Navbar, Cart } from './components'
+import CartContextProvider from './context/CartContext'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css/animate.min.css';
 import './App.css'
-import CartContextProvider from './context/CartContext'
+
 
 function App() {
-    console.log(CartContextProvider);
     return (
                 <BrowserRouter>
                     <CartContextProvider >
                         <div className="App">
-                            <NavBar />
+                            <Navbar />
                             <Routes>
                                 <Route path="/" element={<ItemListContainer greeting="Welcome to the React Shop" />} />
                                 <Route path='/details/:productId' element={<ItemDetailContainer />}/>     

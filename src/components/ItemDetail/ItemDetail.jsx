@@ -1,20 +1,18 @@
 import ItemCount from "../ItemCount/ItemCount";
 import { Row, Col } from 'react-bootstrap';
 import { useCartContext } from './../../context/CartContext';
-
+import './itemDetail.css';
 
 
 function ItemDetail({prod}) {
   const {imgSource, name, desc, price, stock} = prod;
 
-  const {addToCart, cartList} = useCartContext()
+  const { addToCart } = useCartContext()
 
   const onAdd=(count)=>{
-    console.log(count);
     addToCart({ ...prod, cantidad: count })
   }
 
-  console.log(cartList);
   return (
 
     <div className="container mt-5 animate__animated animate__fadeInLeftBig">

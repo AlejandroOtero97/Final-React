@@ -1,4 +1,5 @@
 import Item from "../Item/Item"
+import './itemList.css';
 
 function ItemList({ prods }) {
 

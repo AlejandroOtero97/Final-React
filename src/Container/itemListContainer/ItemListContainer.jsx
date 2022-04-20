@@ -1,17 +1,8 @@
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 import { useEffect, useState } from "react"
-//import { getFetch } from '../helpers/gFetch'
 import { useParams } from "react-router-dom"
-import ItemList from "../components/ItemList/ItemList"
-
-
-import { 
-    collection,    
-    getDocs, 
-    getFirestore,        
-    query, 
-    where 
-} from 'firebase/firestore'
-
+import ItemList from "../../components/ItemList/ItemList"
+import './itemListContainer.css';
 
 function ItemListContainer(){
     const [loading, setLoading] = useState(true)
@@ -32,20 +23,12 @@ function ItemListContainer(){
                 setProds(response.docs.map( prod => ({ id: prod.id, ...prod.data() }) )); 
                 setLoading(false); 
      
-            } catch (error) { 
-                 
-            } 
-                     
-            } 
-     
-            getAll(); 
-       
-              //getFetch  
-              //.then(resp => setProds(resp)) 
-              //.catch((err) => console.log(err)) 
-              //.finally(()=> setLoading(false)) 
-     
-              }, [id, idCategory]) 
+            } catch (error) {
+            }    
+        } 
+        getAll(); 
+
+    }, [id, idCategory]) 
 
     function Greeting(props) {
         return(

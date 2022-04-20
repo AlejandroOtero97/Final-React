@@ -1,4 +1,5 @@
 import React from 'react'
+import './widget.css'
 
 function Widget() {
   return (

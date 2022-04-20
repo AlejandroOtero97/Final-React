@@ -1,0 +1,23 @@
+.imgSource {
+    width: 100%;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.486);
+    border-radius: 10px;
+}
+
+.column-2 {
+    background-color: #0c0c0cb2;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.486);
+}
+
+.price {
+    animation: pricetag 5s linear infinite;
+}
+
+@keyframes pricetag {
+    0%   {color:rgb(255, 1, 1);}
+    25%  {color:rgb(0, 255, 255);}
+    50%  {color:gold;}
+    75%  {color:rgb(21, 255, 0);}
+    100% {color:rgb(255, 0, 0);}
+}

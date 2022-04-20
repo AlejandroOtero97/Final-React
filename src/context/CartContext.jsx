@@ -2,15 +2,11 @@ import { createContext, useContext, useState } from "react";
 
 
 const CartContext = createContext([])
-
 export const useCartContext = () => useContext(CartContext)
 
 
 function CartContextProvider({children}) {
     const [cartList, setCartList] = useState([])
-
-
-
     
     function addToCart(item){
         
@@ -38,11 +34,6 @@ function CartContextProvider({children}) {
         }
     }
 
-
-
-
-
-
     const sumaTotal = () => {
         return cartList.reduce((acum, item) => acum = acum + (item.price * item.cantidad), 0)
     }
@@ -50,8 +41,6 @@ function CartContextProvider({children}) {
     const emptyCart= () =>{
         setCartList([])
     }
-
-    
 
     const deleteItem = (id) => {
         const aux = cartList.filter((item)=> item.id !== id)
@@ -61,8 +50,6 @@ function CartContextProvider({children}) {
     const cantidad = () => {
         return cartList.reduce((acum, item) => acum += item.cantidad, 0)
     } 
-
-    console.log(cartList);
 
     return (
         <CartContext.Provider value={{ 

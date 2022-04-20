@@ -1,0 +1,33 @@
+nav {
+    background-color: rgba(250, 250, 250, 0.192);
+    text-shadow: 1.5px 2px white;
+}
+
+strong {
+    color: gold;
+    text-shadow: 1.5px 2px rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+.brand-title {
+    font-size: 25px;
+    text-decoration: overline;
+    cursor: pointer;
+    color: black;
+}
+
+.brand {
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.nav-counter {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    text-shadow: none;
+    font-size: 17px;
+    background-color: red;
+    border-radius: 18px;
+    padding: 0px 8px;
+}

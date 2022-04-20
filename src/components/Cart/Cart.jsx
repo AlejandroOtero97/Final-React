@@ -2,6 +2,7 @@ import { useCartContext } from './../../context/CartContext';
 import { Button } from 'react-bootstrap'
 import { v4 as uuidv4 } from 'uuid';
 import { useForm } from 'react-hook-form';
+import './cart.css';
 
 
 function Cart() {
@@ -14,13 +15,11 @@ function Cart() {
   }
 
   function generarOrden(data) {
-
       let orden = {}
-
-      orden.buyer = {data};
-
+      orden.buyer = data;
       orden.total = sumaTotal();
       orden.date = new Date();
+
 
       orden.items = cartList.map(cartItem => {
         const id = cartItem.id
@@ -30,14 +29,26 @@ function Cart() {
         return {id, nombre, precio}
       })
     
-    
-      console.log(orden);
+      let resultString = "Nombre: " + orden.buyer.name + `\n` +
+                         "Email: " + orden.buyer.email + `\n` +
+                         "Telefono: " + orden.buyer.phone + `\n`  
+      resultString += "Fecha: " + orden.date.toLocaleDateString("es-ES") + `\n`
+
+      orden.items.forEach(element => {
+        resultString += `Producto: ${element.nombre}, Precio: ${element.precio}\n` 
+      });
+
+      resultString += "Importe Total: $" + orden.total + `\n`;
+
+      alert(resultString)
+      console.log(orden.items)
+      
   }
 
 
   return (
     <>
-      <div className='tables'>
+      <div className='cart__tables'>
         <table>
           <thead>
             <tr>
@@ -54,7 +65,7 @@ function Cart() {
           <tbody>
           {cartList.map(prod => 
             <tr key={uuidv4()}>
-              <td><img src={prod.imgSource} alt="foto" className='img-cart'/> </td>
+              <td><img src={prod.imgSource} alt="foto" className='cart__img-cart'/> </td>
               <td>{prod.name} </td>
               <td>Games</td>
               <td>{prod.desc} </td>
@@ -69,7 +80,7 @@ function Cart() {
       </div>
         
       <div>
-        <h4 className='cart-orden space'> Total de la compra: ${sumaTotal()} </h4>
+        <h4 className='cart__cart-orden space'> Total de la compra: ${sumaTotal()} </h4>
         <Button onClick={emptyCart} className="button-card space">Empty Cart</Button>
 
         <form className='container-fluid bg-dark' onSubmit={handleSubmit(onSubmit)}>

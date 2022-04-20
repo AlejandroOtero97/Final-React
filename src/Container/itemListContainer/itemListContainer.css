@@ -1,0 +1,21 @@
+h2 i {
+    color: rgb(255, 255, 255);
+    animation: flip 2s linear;
+    margin-right: 10px;
+}
+
+.title-second {
+    opacity: 60%;
+    font-size: 18px;
+    font-style: italic;
+    padding: 15px 0px;
+}
+
+@keyframes flip {
+    from, 100% {
+    transform: rotate(0);
+    }
+    to {
+    transform: rotate(180deg);
+    }
+}

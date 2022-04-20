@@ -1,0 +1,30 @@
+table, th, td {
+    border:1px solid black;
+    padding: 0.5rem;
+    background-color: #1a1b1b83;
+}
+
+table {
+    width: 100%;
+}
+
+form {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+.cart__cart-orden {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.cart__tables {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart__img-cart {
+    width: 100%;
+}

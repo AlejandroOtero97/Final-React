@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar"
 import Widget from '../Widget/Widget'
 import { NavLink, Link } from 'react-router-dom'
 import { useCartContext } from '../../context/CartContext';
+import './navbar.css';
 
 function NavBar() {
   const { cantidad, cartList } = useCartContext()
