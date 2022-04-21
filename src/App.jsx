@@ -16,8 +16,8 @@ function App() {
                             <Navbar />
                             <Routes>
                                 <Route path="/" element={<ItemListContainer greeting="Welcome to the React Shop" />} />
-                                <Route path='/details/:productId' element={<ItemDetailContainer />}/>     
-                                <Route path='/category/games' element={<ItemListContainer />}/>    
+                                <Route path='/details/:productId' element={<ItemDetailContainer />}/>
+                                <Route path='/categorias/:categoria' element={<ItemListContainer />}/>   
                                 <Route path='/Cart' element={<Cart />}/>
                                 <Route path='/*' element={<Navigate to='/' />} />
                             </Routes>

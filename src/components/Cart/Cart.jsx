@@ -65,7 +65,7 @@ function Cart() {
             <tr key={uuidv4()}>
               <td><img src={prod.imgSource} alt="foto" className='cart__img-cart'/> </td>
               <td>{prod.name} </td>
-              <td>Games</td>
+              <td>{prod.category}</td>
               <td>{prod.desc} </td>
               <td>{prod.cantidad} </td>
               <td>${prod.price} </td>

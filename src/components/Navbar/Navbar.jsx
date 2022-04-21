@@ -18,11 +18,14 @@ function NavBar() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-            <Link to='/category/games' className="nav-link" >
+            <Link to='/categorias/games' className="nav-link" >
               Games
             </Link>
-            <Link to='/category/parts' className="nav-link" >
-              Parts
+            <Link to='/categorias/movies' className="nav-link" >
+              Movies
+            </Link>
+            <Link to='/categorias/anime' className="nav-link" >
+              Anime
             </Link>
             </Nav>
                 <NavLink to='/Cart'><Widget /></NavLink>

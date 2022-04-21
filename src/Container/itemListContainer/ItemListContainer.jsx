@@ -7,28 +7,27 @@ import './itemListContainer.css';
 function ItemListContainer(){
     const [loading, setLoading] = useState(true)
     const [prods, setProds] = useState([])
-    const { id, idCategory } = useParams()
   
-    useEffect(()=> {
-    
-        async function getAll() { 
-       
-            try { 
-                const db = getFirestore() 
-                const queryCollection =  collection(db, 'item') 
-     
-                const filterQuery = idCategory ? query(queryCollection, where('category', '==', idCategory)) : queryCollection 
-     
-                const response = await getDocs(filterQuery) 
-                setProds(response.docs.map( prod => ({ id: prod.id, ...prod.data() }) )); 
-                setLoading(false); 
-     
-            } catch (error) {
-            }    
-        } 
-        getAll(); 
+    const { categoria } = useParams();
 
-    }, [id, idCategory]) 
+
+    useEffect(() => {
+        setLoading(true);
+        const db = getFirestore();
+
+        const obtenerProductos = categoria
+        ? query(collection(db, "item"), where("category", "==", categoria))
+        : collection(db, "item");
+
+        getDocs(obtenerProductos)
+        .then((data) =>
+        setProds(data.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
+        )
+        .catch((error) => console.log(error))
+        .finally(() => setLoading(false));
+    }, [categoria]);
+
+
 
     function Greeting(props) {
         return(
@@ -40,7 +39,7 @@ function ItemListContainer(){
         <> 
             <div className="animate__animated animate__fadeInDown">
                 <Greeting greeting="Welcome to the React Shop"/>
-                <h5 className="title-second">Browse through our game catalog</h5>
+                <h5 className="title-second">Browse through our catalog</h5>
             </div>
                 {loading ? 
                     <h2><i className="fa-regular fa-hourglass"></i>Loading...</h2>
