@@ -6,9 +6,9 @@ import swal from 'sweetalert';
 
 function CartForm() {
     const { cartList, sumaTotal, emptyCart } = useCartContext();
-    const { register, handleSubmit } = useForm();
+    const {formState: { errors }, register, handleSubmit } = useForm();
   
-  const onSubmit = (data) => {
+    const onSubmit = (data) => {
     generarOrden(data)
   }
 
@@ -50,19 +50,23 @@ function CartForm() {
         <form className='container-fluid' onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
             <label className="form-label">Name</label>
-            <input type="text" className="form-control" placeholder='Alejandro Otero' name='name' {...register('name', { required: true })}/>
+            <input type="text" className="form-control" placeholder='Alejandro Otero' name='name' {...register('name', { required: { value:true, message: "Insert Your Full Name"} })}/>
+            <p className='form-error'>{errors?.name?.message}</p>
           </div>
           <div className="mb-3">
             <label className="form-label">Email</label>
-            <input type="email" className="form-control" placeholder='Example@gmail.com' name='email' {...register('email', { required: true })}/>
+            <input type="text" className="form-control" placeholder='Example@gmail.com' name='email' {...register('email', { required: { value:true, message: "Insert Your Email with @"} })}/>
+            <p className='form-error'>{errors?.email?.message}</p>
           </div>
           <div className="mb-3">
             <label className="form-label">Phone Number</label>
-            <input type="number" className="form-control" placeholder='11-4058-8867' name='phone' {...register('phone', { required: true, minLength: 10 })}/>
+            <input type="number" className="form-control" placeholder='11-4058-8867' name='phone' 
+            {...register('phone', { required: { value:true, message: "Insert Your Phone number with a min of 10 digits"}, minLength: { value: 10, message: "At least 10 digits"} })}/>
+            <p className='form-error'>{errors?.phone?.message}</p>
           </div>
           <div className='flex zindex'>
-            <button type="submit" class="slide">
-              <div>¡Generar Orden!</div>
+            <button type="submit" class="slide" >
+              <div>¡Generate Order!</div>
               <i class="fa-solid fa-chevron-right"></i>
             </button>
           </div>

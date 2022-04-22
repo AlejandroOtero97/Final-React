@@ -95,6 +95,10 @@ form {
   transform: translateX(-6px);
 }
 
+.form-error {
+  animation: pricetag 5s linear infinite;
+}
+
 @media screen and (max-width: 1400px) {
   .cart__img-cart {
     width: 60%;

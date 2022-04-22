@@ -14,7 +14,7 @@ function Cart() {
           <CartDetail />
           <CartForm />
           <div>
-            <h4 className='cart__cart-orden space'> Total de la compra: ${sumaTotal()} </h4>
+            <h4 className='cart__cart-orden space'> Total Cost: ${sumaTotal()} </h4>
             <button onClick={emptyCart} className="slide spacing">
                 <div className=''>Empty Cart</div>
                 <i class="fa-solid fa-chevron-right"></i>
