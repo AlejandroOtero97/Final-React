@@ -6,7 +6,7 @@ import './itemDetailContainer.css';
 
 
 function ItemDetailContainer() {
-    const [producto, setProducto] = useState({})
+    const [product, setProducto] = useState({})
     const [loading, setLoading] = useState(true)
     const { productId } = useParams()
     
@@ -37,8 +37,8 @@ function ItemDetailContainer() {
                     :
                     <div>
                         <ItemDetail 
-                            prod={producto} 
-                            key={producto.id} />
+                            prod={product} 
+                            key={product.id} />
                     </div>                            
             }
         </>

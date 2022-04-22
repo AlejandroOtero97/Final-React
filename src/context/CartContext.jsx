@@ -25,13 +25,6 @@ function CartContextProvider({children}) {
        }
     }
 
-    
-    ///////////////////////////////////
-
-
-    ///////////////////////////////////
-
-
     const isInCart = (id) => {
         const game = cartList.find(element => element.id === id)
         if (game !== undefined) {
@@ -54,7 +47,7 @@ function CartContextProvider({children}) {
         setCartList(aux);
     }
 
-    const cantidad = () => {
+    const quantity = () => {
         return cartList.reduce((acum, item) => acum += item.cantidad, 0)
     } 
 
@@ -64,7 +57,7 @@ function CartContextProvider({children}) {
             addToCart,
             deleteItem,
             emptyCart,
-            cantidad,
+            quantity,
             addTotal,
         }}>
             { children }

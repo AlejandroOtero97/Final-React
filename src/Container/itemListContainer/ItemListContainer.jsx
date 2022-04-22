@@ -7,25 +7,20 @@ import './itemListContainer.css';
 function ItemListContainer(){
     const [loading, setLoading] = useState(true)
     const [prods, setProds] = useState([])
-  
-    const { categoria } = useParams();
+    const { category } = useParams();
 
 
     useEffect(() => {
-        setLoading(true);
+        
         const db = getFirestore();
+        const obtainProducts = category
+        ? query(collection(db, "item"), where("category", "==", category)): collection(db, "item");
 
-        const obtenerProductos = categoria
-        ? query(collection(db, "item"), where("category", "==", categoria))
-        : collection(db, "item");
-
-        getDocs(obtenerProductos)
-        .then((data) =>
-        setProds(data.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
-        )
-        .catch((error) => console.log(error))
-        .finally(() => setLoading(false));
-    }, [categoria]);
+        getDocs(obtainProducts)
+            .then((data) =>setProds(data.docs.map((prod) => ({ id: prod.id, ...prod.data() }))))
+            .catch((error) => console.log(error))
+            .finally(() => setLoading(false));
+    }, [category]);
 
 
 
@@ -41,16 +36,14 @@ function ItemListContainer(){
                 <Greeting greeting="Welcome to the React Shop"/>
                 <h5 className="title-second">Browse through our catalog</h5>
             </div>
-                {loading ? 
+                {loading 
+                    ? 
                     <h2><i className="fa-regular fa-hourglass"></i>Loading...</h2>
                     :
                     <div>
-                        
                         <ItemList prods={prods} /> 
-                    </div>
-                                          
+                    </div>                           
             }
-
         </>
     )
 }

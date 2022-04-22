@@ -7,7 +7,7 @@ import { useCartContext } from '../../context/CartContext';
 import './navbar.css';
 
 function NavBar() {
-  const { cantidad, cartList } = useCartContext()
+  const { quantity, cartList } = useCartContext()
 
   return (
     
@@ -18,19 +18,19 @@ function NavBar() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-            <Link to='/categorias/games' className="nav-link" >
+            <Link to='/categorys/games' className="nav-link" >
               Games
             </Link>
-            <Link to='/categorias/movies' className="nav-link" >
+            <Link to='/categorys/movies' className="nav-link" >
               Movies
             </Link>
-            <Link to='/categorias/anime' className="nav-link" >
+            <Link to='/categorys/anime' className="nav-link" >
               Anime
             </Link>
             </Nav>
                 <NavLink to='/Cart'><Widget /></NavLink>
                 <div className='nav-counter'>
-                  { cartList.length > 0 && cantidad()}
+                  { cartList.length > 0 && quantity()}
                 </div>
             </Navbar.Collapse>
         </Container>

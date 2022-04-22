@@ -1,9 +1,9 @@
 export const getFetch = new Promise((resolve, reject)=>{
-    let productos = [];
+    let products = [];
     let condition = true
     if(condition){
         setTimeout(() => {
-            resolve(productos)
+            resolve(products)
         }, 3000);
     }else{
         reject("404 - not found")
