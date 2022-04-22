@@ -1,7 +1,6 @@
 # Bienvenido a  MoebiuzShop
 
 ![](https://i.pinimg.com/originals/3b/07/6c/3b076c58a2428b5fa6352c3832198fd4.png)
-
 **Proyecto final para la cursada ReactJs de Federico Osandón Coderhouse.**
 
 
@@ -54,7 +53,7 @@ Una vez seleccionado 1 o mas productos de la pagina, al volver al carrito nos en
 - Ingresar un mail valido que contenga "@".
 - Ingresar un numero celular con al menos 10 digitos.
 
-# Dependencies :tw-1f517:
+# Dependencies 
 
 **Animate.css (4.1.1)**: Animate.css es una libreria lista-para-usar, cross-browser con animaciones para que utilices en tus proyectos.
 
@@ -73,5 +72,4 @@ Una vez seleccionado 1 o mas productos de la pagina, al volver al carrito nos en
 
 ### Visita el sitio ahora!
 [MoebiuzShop Website](https://jolly-dusk-4fee37.netlify.app/ "MoebiuzShop Website")
-
 ![](https://www.latercera.com/resizer/SJuISc0wYP266vShhLgyYcn6l1E=/800x0/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/K4C7P4D5KBDDDEWGPO47N5UTOA.jpg)
