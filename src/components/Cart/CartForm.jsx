@@ -56,7 +56,7 @@ function CartForm() {
           </div>
           <div className="mb-3">
             <label className="form-label">Phone Number</label>
-            <input type="number" className="form-control" placeholder='11-4058-8867' name='phone' {...register('phone', { required: true })}/>
+            <input type="number" className="form-control" placeholder='11-4058-8867' name='phone' {...register('phone', { required: true, minLength: 10 })}/>
           </div>
           <div className='flex zindex'>
             <button type="submit" class="slide">

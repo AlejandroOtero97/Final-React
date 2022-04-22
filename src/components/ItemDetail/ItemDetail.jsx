@@ -8,13 +8,13 @@ import { Link } from "react-router-dom";
 function ItemDetail({prod}) {
   const {imgSource, name, desc, price } = prod;
   const [ counter, setCounter ] = useState(0)
-  const { addToCart } = useCartContext()
+  const { addToCart, cartList } = useCartContext()
 
   const onAdd=(count)=>{
     setCounter(count)
     addToCart({ ...prod, cantidad: count })
   }
-
+  console.log(cartList)
   return (
 
     <div className="container mt-5 animate__animated animate__fadeInLeftBig">
