@@ -5,7 +5,7 @@ import swal from 'sweetalert';
 
 
 function CartForm() {
-    const { cartList, sumaTotal, emptyCart } = useCartContext();
+    const { cartList, addTotal, emptyCart } = useCartContext();
     const {formState: { errors }, register, handleSubmit } = useForm();
   
     const onSubmit = (data) => {
@@ -13,32 +13,30 @@ function CartForm() {
   }
 
   function generarOrden(data) {
-      let orden = {}
-      orden.buyer = data;
-      orden.total = sumaTotal();
-      orden.date = new Date();
-
-
-      orden.items = cartList.map(cartItem => {
+      let order = {}
+      order.buyer = data;
+      order.total = addTotal();
+      order.date = new Date();
+      order.items = cartList.map(cartItem => {
         const id = cartItem.id
-        const nombre = cartItem.name
-        const precio = cartItem.price * cartItem.cantidad
+        const nick = cartItem.name
+        const price = cartItem.price * cartItem.cantidad
 
-        return {id, nombre, precio}
+        return {id, nick, price}
       })
 
       
-      let resultString = "Name: " + orden.buyer.name + `\n` +
-                         "Email: " + orden.buyer.email + `\n` +
-                         "Phone: " + orden.buyer.phone + `\n`  
-      resultString += "Date: " + orden.date.toLocaleDateString("es-ES") + `\n`
+      let resultString = "Name: " + order.buyer.name + `\n` +
+                         "Email: " + order.buyer.email + `\n` +
+                         "Phone: " + order.buyer.phone + `\n`  
+      resultString += "Date: " + order.date.toLocaleDateString("es-ES") + `\n`
       resultString += "Order ID: " + uuidv4() + `\n`
 
-      orden.items.forEach(element => {
-        resultString += `Product: ${element.nombre}, Price: ${element.precio}\n` 
+      order.items.forEach(element => {
+        resultString += `Product: ${element.nick}, Price: ${element.price}\n` 
       });
 
-      resultString += "Total Import: $" + orden.total + `\n`;
+      resultString += "Total Import: $" + order.total + `\n`;
 
       swal("Purchase Order", resultString, "success")
       emptyCart();
@@ -65,9 +63,9 @@ function CartForm() {
             <p className='form-error'>{errors?.phone?.message}</p>
           </div>
           <div className='flex zindex'>
-            <button type="submit" class="slide" >
+            <button type="submit" className="slide" >
               <div>¡Generate Order!</div>
-              <i class="fa-solid fa-chevron-right"></i>
+              <i className="fa-solid fa-chevron-right"></i>
             </button>
           </div>
         </form>

@@ -17,7 +17,7 @@ function Item({prod}) {
                   {prod.desc}
                 </Card.Text>
                 <Link to={`/details/${prod.id}`}>
-                  <button type="button" class="fill mt-auto">More Info!</button>
+                  <button type="button" className="fill mt-auto">More Info!</button>
                 </Link>
             </Card.Body>
           </Card>

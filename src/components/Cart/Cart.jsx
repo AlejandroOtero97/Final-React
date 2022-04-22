@@ -5,7 +5,7 @@ import CartDetail from './CartDetail';
 import './cart.css';
 
 function Cart() {
-  const { emptyCart, cartList, sumaTotal } = useCartContext();
+  const { emptyCart, cartList, addTotal } = useCartContext();
 
   return (
     <>
@@ -14,10 +14,10 @@ function Cart() {
           <CartDetail />
           <CartForm />
           <div>
-            <h4 className='cart__cart-orden space'> Total Cost: ${sumaTotal()} </h4>
+            <h4 className='cart__cart-orden space'> Total Cost: ${addTotal()} </h4>
             <button onClick={emptyCart} className="slide spacing">
                 <div className=''>Empty Cart</div>
-                <i class="fa-solid fa-chevron-right"></i>
+                <i className="fa-solid fa-chevron-right"></i>
             </button>
           </div>
         </>
@@ -29,9 +29,9 @@ function Cart() {
           </div>
           <Link to="/">
             <div className='zindex'>
-              <button type="button" class="slide">
+              <button type="button" className="slide">
                 <div>Start Shopping!</div>
-                <i class="fa-solid fa-chevron-right"></i>
+                <i className="fa-solid fa-chevron-right"></i>
               </button>
             </div>     
           </Link>

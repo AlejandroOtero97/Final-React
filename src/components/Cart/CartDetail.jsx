@@ -11,21 +11,23 @@ function CartDetail() {
           <table>
             <thead>
               <tr>
-                <th>Imagen</th>
-                <th>Nombre</th>
-                <th>Categoria</th>
-                <th>Cantidad</th>
-                <th>Precio</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Price</th>
                 <th>Total</th>
-                <th>Eliminar</th>
+                <th>Remove</th>
               </tr>
             </thead>
             <tbody>
             {cartList.map(prod => 
               <tr key={uuidv4()}>
-                <Link to={`/details/${prod.id}`}>
-                  <td><img src={prod.imgSource} alt="foto" className='cart__img-cart'/> </td>
-                </Link>
+                <td>
+                  <Link to={`/details/${prod.id}`}>
+                    <img src={prod.imgSource} alt="foto" className='cart__img-cart'/> 
+                  </Link>
+                </td>
                 <td>{prod.name}</td>
                 <td>{prod.category}</td>
                 <td>{prod.cantidad}</td>
