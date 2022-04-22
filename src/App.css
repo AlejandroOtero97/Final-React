@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+*{ 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     min-height: 100%;
     background: linear-gradient(
         180deg,
         rgba(45, 20, 44, 1) 100%,
         rgba(81, 10, 50, 1) 0%
-        );
+        );   
 }
 
 .App {
@@ -21,6 +27,8 @@ body {
         rgba(128, 19, 54, 1),
         rgba(81, 10, 50, 1),
         rgba(45, 20, 44, 1));
+    position: relative;
+    z-index: 1;
 }
 
 h1 {
@@ -34,6 +42,10 @@ i {
 
 .container-fluid {
     width: 50%;
+    background: url("https://media.istockphoto.com/vectors/sky-starry-black-night-background-with-star-starry-galaxy-space-8bit-vector-id1354982067?k=20&m=1354982067&s=612x612&w=0&h=UKybMX7Be2jqsvUb9aAg1upS00uKLIPJYPLVEEyYjnE=");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .flex {
@@ -46,13 +58,15 @@ i {
     padding: 10px;
 }
 
+.spacing {
+    margin-bottom: 4rem;
+}
 
 @media (max-width: 1400px) {
     .card {
         width: 16rem;
-        height: 22rem;
+        height: 23rem;
     }
-
     .App h1 {
         font-size: 35px;
     }

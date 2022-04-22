@@ -6,7 +6,7 @@
     text-shadow: none;
     color: white;
     width: 18rem;
-    height: 24rem;
+    height: 26rem;
     margin-bottom: 20px;
 }
 
@@ -30,25 +30,6 @@
     color: black;
 }
 
-.button-card {
-    background-color: #343A3F;
-    border-radius: 0px;
-    border: 3px solid white;
-    color: white;
-    padding: 5px;
-}
-
-.button-card:hover {
-    background-color: rgba(156, 159, 161, 0.575);
-    box-shadow: 3px 2px 0 #fff, 10px 10px 0 rgba(0,0,0,0.2);
-    border: 3px solid white;
-}
-
-.card:hover {
-    box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273);
-    transition: all 0.18s ease-in-out;
-}
-
 .overflow {
     overflow: hidden;
 }
@@ -62,4 +43,32 @@
 
 .card-img-top:hover {
     transform: scale(1.5);
+}
+
+.fill {
+    font-size: 20px;
+    font-weight: 200;
+    padding: 10px 30px 8px;
+    outline: 0;
+    border: 2px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+}
+  
+.fill::after {
+    content: "";
+    background-color: #f8f8f8;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+  
+.fill:hover::after {
+    top: 0px;
+    left: 0px;
 }
