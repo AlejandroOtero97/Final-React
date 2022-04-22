@@ -2,14 +2,16 @@ import ItemCount from "../ItemCount/ItemCount";
 import { Row, Col } from 'react-bootstrap';
 import { useCartContext } from './../../context/CartContext';
 import './itemDetail.css';
-
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function ItemDetail({prod}) {
-  const {imgSource, name, desc, price, stock} = prod;
-
+  const {imgSource, name, desc, price } = prod;
+  const [ counter, setCounter ] = useState(0)
   const { addToCart } = useCartContext()
 
   const onAdd=(count)=>{
+    setCounter(count)
     addToCart({ ...prod, cantidad: count })
   }
 
@@ -25,9 +27,24 @@ function ItemDetail({prod}) {
           <h5 className="mb-3"> {desc} </h5>
           <h3 className="price mb-3"> ${price} </h3>
           <div>
-            <div className="flex mb-2">
-              <ItemCount stock={stock} initial={1} onAdd={onAdd} />
-            </div>
+          {
+              counter === 0
+              
+              ? 
+
+              <ItemCount stock={prod.stock} initial={1} onAdd={onAdd}/>
+
+              : 
+
+              <div className="mt-4">
+                  <Link to='/'>
+                      <button className="btn btn-dark mb-3">Continue Browsing</button>
+                  </Link>
+                  <Link to='/cart'>
+                      <button className="btn btn-dark">Finish Shopping</button>
+                  </Link>
+              </div>
+          }
           </div>
         </Col>
       </Row>                       

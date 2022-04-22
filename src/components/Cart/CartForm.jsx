@@ -4,7 +4,7 @@ import swal from 'sweetalert';
 
 
 function CartForm() {
-    const { cartList, sumaTotal } = useCartContext();
+    const { cartList, sumaTotal, emptyCart } = useCartContext();
     const { register, handleSubmit } = useForm();
   
   const onSubmit = (data) => {
@@ -25,6 +25,7 @@ function CartForm() {
 
         return {id, nombre, precio}
       })
+
     
       let resultString = "Nombre: " + orden.buyer.name + `\n` +
                          "Email: " + orden.buyer.email + `\n` +
@@ -38,6 +39,7 @@ function CartForm() {
       resultString += "Importe Total: $" + orden.total + `\n`;
 
       swal("Orden de Compra", resultString, "success")
+      emptyCart();
   }
 
   return (

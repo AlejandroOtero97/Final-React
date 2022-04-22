@@ -4,21 +4,14 @@ import './interchange.css';
 
 const ButtonCount= ({handleInput})=> {
     return (
-        <button 
-            className="interchange__button-buy" 
-            onClick={handleInput}>
-                Buy!
-        </button>
+        <button className="interchange__button-buy" onClick={handleInput}> Buy! </button>
     )
 }
 
 const InputCount= ()=> {
     return (
         <Link to='/cart' >
-            <button 
-                className="interchange__button-finish">
-                    To Cart!
-            </button>
+            <button className="interchange__button-finish"> To Cart! </button>
         </Link>
     )
 }

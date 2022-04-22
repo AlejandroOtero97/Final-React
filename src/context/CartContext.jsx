@@ -7,8 +7,8 @@ export const useCartContext = () => useContext(CartContext)
 
 function CartContextProvider({children}) {
     const [cartList, setCartList] = useState([])
-    
-    function addToCart(item){
+
+    function addToCart(item) {
         
         if(isInCart(item.id)){
            
@@ -24,6 +24,13 @@ function CartContextProvider({children}) {
            setCartList ( [...cartList, item ])
        }
     }
+
+    
+    ///////////////////////////////////
+
+
+    ///////////////////////////////////
+
 
     const isInCart = (id) => {
         const game = cartList.find(element => element.id === id)
@@ -58,7 +65,7 @@ function CartContextProvider({children}) {
             deleteItem,
             emptyCart,
             cantidad,
-            sumaTotal
+            sumaTotal,
         }}>
             { children }
         </CartContext.Provider>

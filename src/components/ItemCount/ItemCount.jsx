@@ -26,15 +26,12 @@ function ItemCount ( { stock, initial, onAdd } ){
         <div className='inputContainer'> 
             <div className='buyInput'> 
                 <div> 
-                    <button className='interchange__button-buy' onClick={handleDecrease}>-</button> 
+                    <button className='btn btn-dark m-3' onClick={handleDecrease}>-</button> 
                     <label>{count}</label> 
-                    <button className='interchange__button-buy' onClick={handleIncrease}>+</button>
+                    <button className='btn btn-dark m-3' onClick={handleIncrease}>+</button>
                     
                 </div>
-                <div className='buttons'>
-                    <button onClick={ add } className="interchange__button-buy">Add</button>
-                    <Interchange />
-                </div>
+                <button onClick={ add } className="btn btn-dark m-3">ADD TO CART</button>
                 
             </div>
             

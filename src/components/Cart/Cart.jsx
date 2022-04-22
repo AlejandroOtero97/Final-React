@@ -25,7 +25,7 @@ function Cart() {
         <>
           <div className='space animate__animated animate__shakeX'>
             <h1>¡Cart is Empty!</h1>
-            <h4>Start browsing out catalog</h4>
+            <h4>Browse our catalog</h4>
           </div>
           <Link to="/">
             <div className='zindex'>
