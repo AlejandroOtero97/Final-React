@@ -1,5 +1,6 @@
 import { useCartContext } from './../../context/CartContext';
 import { useForm } from 'react-hook-form';
+import { v4 as uuidv4 } from 'uuid';
 import swal from 'sweetalert';
 
 
@@ -26,19 +27,20 @@ function CartForm() {
         return {id, nombre, precio}
       })
 
-    
-      let resultString = "Nombre: " + orden.buyer.name + `\n` +
+      
+      let resultString = "Name: " + orden.buyer.name + `\n` +
                          "Email: " + orden.buyer.email + `\n` +
-                         "Telefono: " + orden.buyer.phone + `\n`  
-      resultString += "Fecha: " + orden.date.toLocaleDateString("es-ES") + `\n`
+                         "Phone: " + orden.buyer.phone + `\n`  
+      resultString += "Date: " + orden.date.toLocaleDateString("es-ES") + `\n`
+      resultString += "Order ID: " + uuidv4() + `\n`
 
       orden.items.forEach(element => {
-        resultString += `Producto: ${element.nombre}, Precio: ${element.precio}\n` 
+        resultString += `Product: ${element.nombre}, Price: ${element.precio}\n` 
       });
 
-      resultString += "Importe Total: $" + orden.total + `\n`;
+      resultString += "Total Import: $" + orden.total + `\n`;
 
-      swal("Orden de Compra", resultString, "success")
+      swal("Purchase Order", resultString, "success")
       emptyCart();
   }
 
