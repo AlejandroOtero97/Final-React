@@ -54,7 +54,7 @@ Una vez seleccionado 1 o mas productos de la pagina, al volver al carrito nos en
 - Ingresar un mail valido que contenga "@".
 - Ingresar un numero celular con al menos 10 digitos.
 
-# Dependencies
+# Dependencies :tw-1f517:
 
 **Animate.css (4.1.1)**: Animate.css es una libreria lista-para-usar, cross-browser con animaciones para que utilices en tus proyectos.
 
