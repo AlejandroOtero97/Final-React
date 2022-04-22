@@ -18,7 +18,7 @@
 5. Cart
 
 
-##1. Navbar
+## 1. Navbar
 
 Esta seccion esta separada en 3 partes:
 
@@ -27,11 +27,11 @@ Esta seccion esta separada en 3 partes:
 3. **CART** : por ultimo encontraremos el boton para ingresar al carrito
 
 
-##2. Home
+## 2. Home
 
 Pagina de inicio donde se encontrara el total de los productos distribuidos en las distintas categorias, tambien es donde nos dejara el boton de "*start browsing*" ubicado en el cart si el mismo se encuentra vacio.
 
-##3. Categories
+## 3. Categories
 
 1. **Games**: productos filtrados por videojuegos.
 
@@ -39,13 +39,13 @@ Pagina de inicio donde se encontrara el total de los productos distribuidos en l
 
 3. **Anime**: productos filtrados por anime.
 
-##4. Details
+## 4. Details
 
 Aqui es donde nos encontraremos si seleccionamos algun boton de "*more info*" de algun producto encontrado en el sitio.
 
 Una vez cargado el detalle se vera una imagen de mayor resolucion del producto por el lado izquierdo, procediendo por la derecha veremos una pequeña descripcion de nuestro item y un contador de stock con los botones para comprar dicho producto.
 
-##5. Cart
+## 5. Cart
 
 Este es el sector donde podremos ver el resumen de nuestra compra una vez empezada, ya que si el carrito esta vacio nos encontraremos con un mensaje de que no hay items actualmente para procesar.
 
